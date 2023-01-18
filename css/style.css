@@ -2,7 +2,7 @@
     --fuenteHeading: 'Montserrat', sans-serif;
     --fuenteParrafos: 'Montserrat', sans-serif;
 
-    --primario: #c1009a;
+    --primario: #940077;
     --secundario: #ff0000;
     --triada: #591BC5;
     --logo: #A3FFDB;
@@ -10,7 +10,7 @@
     --gris: #888888;
     --grisclaro: #ececec;
     --negative: #ffffff;
-    --dark: #241d29;
+    --dark: #000000;
 
     --primario-pale: #ff00e663;
     --secundario-pale: #a3fff385;
@@ -390,54 +390,23 @@ justify-content: center;
   padding: 75px 0;
   margin: 0 auto;
   width: 1140px;
+
 }
 
 .gallery-wrap {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 70vh;
+  height: 30vh;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .gallery-wrap {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 70vh;
   }
-}
-
-.item {
-  flex: 1;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: none;
-  transition: flex 0.8s ease;
-}
-.item:hover {
-    flex: 9;
-  }
-
-.item-1 { 
-  background-image: url('https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80');
-}
-
-.item-2 { 
-  background-image: url('https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80');
-}
-
-.item-3 { 
-  background-image: url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80');
-}
-
-.item-4 { 
-  background-image: url('https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80');
-}
-
-.item-5 { 
-  background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80');
 }
 
 
@@ -670,8 +639,13 @@ max-width: 100%;
     position: absolute;
     top:0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 99%;
+    height: 99%;
+}
+
+#frame {
+    border: .2rem solid var(--gris); 
+    border-radius: 3.2rem;
 }
 
 /*BLOG*/
@@ -736,6 +710,15 @@ max-width: 100%;
         flex: 0%;
         object-fit: cover;
         scroll-snap-align: center;
+    }
+    .slider-item label{
+    color: var(--negative);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+
+    }
+    .slider-item:hover label{
+    color: var(--primario);
     }
 
 /*SCROLLER*/
@@ -820,7 +803,7 @@ max-width: 100%;
       }
       .iframe {
         width: 700px;
-        height: 500px;
+        height: auto;
       }
   }
 
@@ -836,7 +819,7 @@ max-width: 100%;
         }
     .iframe {
         width: 800px;
-        height: 500px;
+        height: auto;
         }
         
     }
@@ -854,7 +837,7 @@ max-width: 100%;
         }
         .iframe {
             width: 1010px;
-            height: 500px;
+            height: auto;
         }
         .d-block-sm {
         display: block;

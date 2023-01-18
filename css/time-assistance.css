@@ -1,0 +1,55 @@
+#frame {
+    border: .2rem solid var(--gris); 
+    border-radius: 3.2rem;
+}
+.item {
+    flex: .3;
+    height: 100%;
+    background-position:left;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 1s ease-in-out;
+    opacity: .2;
+  }
+  .item:hover {
+      flex: 9;
+      opacity: 1;
+      transition: flex 1s ease-in-out;
+      background-position: center;
+    }
+  
+  .item-1 { 
+    background-image: url('../img/Bodyssage/Bodyssage-mobile\ MU.png');
+  }
+  .item-1:hover { 
+    background-image: url('../img/Bodyssage/Bodyssage-mobile\ MU.png');
+  }
+  
+  .item-2 { 
+    background-image: url('../img/Bodyssage/bodyssage-mockup1.jpeg');
+  }
+  .item-2:hover { 
+    background-image: url('../img/Bodyssage/bodyssage-mockup1.jpeg');
+  }
+  
+  .item-3 { 
+    background-image: url('../img/Bodyssage/Bodyssageweb1.png');
+  }
+  .item-3:hover { 
+    background-image: url('../img/Bodyssage/Bodyssageweb1.png');
+  }
+  
+  .item-4 { 
+    background-image: url('../img/Bodyssage/Bodyssage-mobile\ MU.png');
+  }
+  .item-4:hover { 
+    background-image: url('../img/Bodyssage/Bodyssage-mobile\ MU.png');
+  }
+  
+  .item-5 { 
+    background-image: url('../img/Bodyssage/bodyssage\ tablet\ movil2.png');
+  }
+  .item-5:hover { 
+    background-image: url('../img/Bodyssage/bodyssage\ tablet\ movil2.png');
+  }
+  

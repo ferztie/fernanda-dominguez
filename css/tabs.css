@@ -1,7 +1,7 @@
 ul#tabs-list {
   list-style: none;
   text-align: center;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid var(--negative);
   margin: 0;
   padding: 0;
 }
@@ -13,12 +13,11 @@ label.panel-label {
           user-select: none;
   display: block;
   width: 100%;
-  color: #bdc3c7;
   cursor: pointer;
-  background-color: #ecf0f1;
   transition-property: background-color, color;
   transition-duration: 200ms;
 }
+
 label.panel-label:hover {
   color: var(--primario);
 }
@@ -65,188 +64,39 @@ label.panel-label:hover {
   padding: 48px 24px;
 }
 
-@media all and (max-width: 767px) {
-  #nav-ctrl:checked ~ #tabs-list #li-for-panel-1 {
-    max-height: 46px;
-    opacity: 1;
-  }
-
-  #nav-ctrl:checked ~ #tabs-list #li-for-panel-2 {
-    max-height: 46px;
-    opacity: 1;
-  }
-
-  #nav-ctrl:checked ~ #tabs-list #li-for-panel-3 {
-    max-height: 46px;
-    opacity: 1;
-  }
-
-  #nav-ctrl:checked ~ #tabs-list #li-for-panel-4 {
-    max-height: 46px;
-    opacity: 1;
-  }
-
-  #nav-ctrl:checked ~ #tabs-list #li-for-panel-5 {
-    max-height: 46px;
-    opacity: 1;
-  }
-
-  #open-nav-label {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    cursor: pointer;
-  }
-
-  #nav-ctrl:checked ~ #tabs-list #open-nav-label {
-    display: none;
-  }
-
-  #close-nav-label {
-    display: block;
-    max-height: 0;
-    overflow-y: hidden;
-    background-color: #444444;
-    color: var(--negative);
-    padding: 0px;
-    transition: max-height 200ms;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 22px;
-    letter-spacing: 1px;
-  }
-
-  #nav-ctrl:checked ~ #tabs-list #close-nav-label {
-    max-height: 36px;
-    opacity: 1;
-    padding: 12px 24px;
-  }
-
-  #tabs-list {
-    position: relative;
-  }
-  #tabs-list label.panel-label {
-    padding: 12px 0;
-  }
-  #tabs-list #li-for-panel-1 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
-  #tabs-list #li-for-panel-2 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
-  #tabs-list #li-for-panel-3 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
-  #tabs-list #li-for-panel-4 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
-  #tabs-list #li-for-panel-5 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
-
-  #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 {
-    max-height: 46px;
-    opacity: 1;
-  }
-  #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 label.panel-label {
-    background-color: var(--negative);
-    color: var(--primario);
-    color: var(--primario);
-    color: var(--negative);
-  }
-
-  #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 {
-    max-height: 46px;
-    opacity: 1;
-  }
-  #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 label.panel-label {
-    background-color: var(--negative);
-    color: var(--primario);
-    color: var(--primario);
-    color: var(--negative);
-  }
-
-  #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 {
-    max-height: 46px;
-    opacity: 1;
-  }
-  #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 label.panel-label {
-    background-color: var(--negative);
-    color: var(--primario);
-    color: var(--primario);
-    color: var(--negative);
-  }
-
-  #panel-4-ctrl:checked ~ #tabs-list #li-for-panel-4 {
-    max-height: 46px;
-    opacity: 1;
-  }
-  #panel-4-ctrl:checked ~ #tabs-list #li-for-panel-4 label.panel-label {
-    background-color: var(--negative);
-    color: var(--primario);
-    color: var(--primario);
-    color: var(--negative);
-  }
-
-  #panels .container {
-    width: 100%;
-  }
-  #panels section header {
-    display: block;
-  }
-}
 @media all and (min-width: 768px) {
   #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 {
     pointer-events: none;
     cursor: default;
     transform: translate3d(0, 1px, 0);
     box-shadow: none;
-    border-right: none;
   }
   #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1.last {
     border-right: 1px solid transparent;
   }
   #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 + li {
-    border-left: 1px solid #dfdfdf;
+    border-left: 1px solid var(--negative);
   }
   #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 label.panel-label {
-    background-color: white;
     color: var(--primario);
     padding-top: 26px;
   }
   #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 label.panel-label::after {
     height: 6px;
   }
-
   #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 {
     pointer-events: none;
     cursor: default;
     transform: translate3d(0, 1px, 0);
     box-shadow: none;
-    border-right: none;
   }
   #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2.last {
     border-right: 1px solid transparent;
   }
   #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 + li {
-    border-left: 1px solid #dfdfdf;
+    border-left: 1px solid var(--negative);
   }
   #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 label.panel-label {
-    background-color: white;
     color: var(--primario);
     padding-top: 26px;
   }
@@ -259,16 +109,14 @@ label.panel-label:hover {
     cursor: default;
     transform: translate3d(0, 1px, 0);
     box-shadow: none;
-    border-right: none;
   }
   #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3.last {
     border-right: 1px solid transparent;
   }
   #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 + li {
-    border-left: 1px solid #dfdfdf;
+    border-left: 1px solid var(--negative);
   }
   #panel-3-ctrl:checked ~ #tabs-list #li-for-panel-3 label.panel-label {
-    background-color: white;
     color: var(--primario);
     padding-top: 26px;
   }
@@ -281,16 +129,14 @@ label.panel-label:hover {
     cursor: default;
     transform: translate3d(0, 1px, 0);
     box-shadow: none;
-    border-right: none;
   }
   #panel-4-ctrl:checked ~ #tabs-list #li-for-panel-4.last {
     border-right: 1px solid transparent;
   }
   #panel-4-ctrl:checked ~ #tabs-list #li-for-panel-4 + li {
-    border-left: 1px solid #dfdfdf;
+    border-left: 1px solid var(--negative);
   }
   #panel-4-ctrl:checked ~ #tabs-list #li-for-panel-4 label.panel-label {
-    background-color: white;
     color:var(--primario);
     padding-top: 26px;
   }
@@ -303,16 +149,14 @@ label.panel-label:hover {
     cursor: default;
     transform: translate3d(0, 1px, 0);
     box-shadow: none;
-    border-right: none;
   }
   #panel-5-ctrl:checked ~ #tabs-list #li-for-panel-5.last {
     border-right: 1px solid transparent;
   }
   #panel-5-ctrl:checked ~ #tabs-list #li-for-panel-5 + li {
-    border-left: 1px solid #dfdfdf;
+    border-left: 1px solid var(--negative);
   }
   #panel-5-ctrl:checked ~ #tabs-list #li-for-panel-5 label.panel-label {
-    background-color: white;
     color: var(--primario);
     padding-top: 26px;
   }
@@ -322,7 +166,7 @@ label.panel-label:hover {
 
   ul#tabs-list {
     text-align: center;
-    border-bottom: 1px solid #dfdfdf;
+    border-bottom: 1px solid var(--negative);
   }
   ul#tabs-list li {
     display: inline-block;
@@ -330,40 +174,14 @@ label.panel-label:hover {
     font-size: 0.875em;
     width: 18%;
     box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.05);
-    border-right: 1px solid #dfdfdf;
     position: relative;
   }
-  ul#tabs-list li:hover {
-    transition: none;
-    border-right: none;
-  }
-  ul#tabs-list li:hover.last {
-    border-right: 1px solid transparent;
-  }
-  ul#tabs-list li:hover + li {
-    border-left: 1px solid #dfdfdf;
-  }
-  ul#tabs-list li label.panel-label {
+/*
+  #tabs-list li label.panel-label {
     position: relative;
-    padding: 24px 0;
+    padding: 16px 0;
   }
-  ul#tabs-list li label.panel-label::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 100%;
-    background-color: var(--primario);
-    height: 0;
-    transition-property: height;
-    transition-duration: 200ms;
-  }
-  ul#tabs-list li label.panel-label:hover {
-    padding-top: 25px;
-  }
-  ul#tabs-list li label.panel-label:hover::after {
-    height: 6px;
-  }
+  */
 
   #open-nav-label,
 #close-nav-label {
@@ -373,6 +191,7 @@ label.panel-label:hover {
     display: none;
   }
 }
+
 @media all and (min-width: 900px) {
   main {
     width: 99%;
@@ -417,7 +236,7 @@ body {
   width: 90%;
   margin: 0 auto;
   padding: 48px 24px;
-  color: white;
+  color: var(--negative);
 }
 #introduction h1 {
   font-weight: 300;
@@ -427,19 +246,19 @@ body {
 main h1 {
   margin-top: 0;
   font-weight: 300;
-  color: #c0392b;
+  color: var(--primario);
 }
 main p {
   line-height: 1.8;
 }
 main hr {
   margin: 12px 0;
-  border-top: 1px solid #dfdfdf;
+  border-top: 1px solid var(--negative);
 }
 
 label.demo-label {
-  background-color: #c0392b;
-  color: white;
+  background-color: var(--primario);
+  color: var(--negative);
   padding: 4px 8px;
   border-radius: 2px;
   cursor: pointer;
@@ -457,7 +276,7 @@ label.demo-label:hover {
   display: none;
 }
 #demo-child-toggle:checked ~ #demo-parent #demo-child {
-  color: #c0392b;
+  color:var(--primario);
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -466,12 +285,11 @@ label.demo-label:hover {
   margin-top: 8px;
 }
 
-code,
-pre {
-  color: #c0392b;
-  font-family: Inconsolata, "Andale Mono", Andale, monowidth;
-  background-color: #ecf0f1;
-  border: 1px solid #dfdfdf;
+code, pre {
+  color: var(--primario);
+  font-family: var(--fuenteParrafos);
+  background-color: var(--negative);
+  border: 1px solid var(--negative);
   border-radius: 2px;
 }
 
@@ -484,6 +302,6 @@ pre {
   line-height: 1.6;
 }
 pre strong {
-  color: #444444;
+  color: var(--gray);
   font-weight: normal;
 }
