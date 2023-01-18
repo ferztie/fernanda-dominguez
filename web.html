@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="icon" type="fav-icon" href="img/vozzoa-sello.svg" >
+</head>
+<body class="default-container">
+    <header class="d-flex">
+        <nav role="navigation">
+            <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="index.html"><li>Home</li></a>
+                <a href="about.html"><li>About</li></a>
+                <a href="cv.html"><li>CV</li></a>
+                <a href="work.html" class="typo-change bold"><li>Work</li></a>
+                <a href="https://www.behance.net/fernandadominguez" target="_blank"><li>Behance</li></a>
+            </ul>
+            </div>
+        </nav>
+        <span>
+            <a href="index.html" style="font-size:3rem;" class="align-center d-flex pl-3 fs-22 bold"> 💫
+            </a>
+        </span>
+        </header>
+
+    <div class="container pb-3 ">
+        <h1 class="m-0 fw-300 bold uppercase pt-3">Web Development</br></h1>
+    </div>
+
+
+                <!-- TAB CONTROLLERS -->
+                <input id="panel-1-ctrl"
+                class="panel-radios" type="radio" name="tab-radios">
+                <input id="panel-2-ctrl"
+                class="panel-radios" type="radio" name="tab-radios">
+                <input id="panel-3-ctrl"
+                class="panel-radios" type="radio" name="tab-radios">
+                <input id="panel-4-ctrl"
+                class="panel-radios" type="radio" name="tab-radios">
+
+                
+                <!-- TABS LIST -->
+                <ul id="tabs-list">
+                <!-- MENU TOGGLE -->
+                
+                <label id="open-nav-label" for="nav-ctrl"></label>
+                <li id="li-for-panel-1">
+                <label class="panel-label"
+                    for="panel-1-ctrl">Finamex</label>
+                </li><!--INLINE-BLOCK FIX
+        
+                --><li id="li-for-panel-2">
+                <label class="panel-label"
+                    for="panel-2-ctrl">Lentes Purpura</label>
+                </li><!--INLINE-BLOCK FIX
+        
+                --><li id="li-for-panel-3">
+                <label class="panel-label"
+                    for="panel-3-ctrl">Bodyssage</label>
+                </li><!--INLINE-BLOCK FIX
+        
+                --><li id="li-for-panel-4">
+                <label class="panel-label"
+                    for="panel-4-ctrl">Time Assistance</label>
+                </li><!--INLINE-BLOCK FIX
+        
+                --><li id="li-for-panel-5" class="last">
+                <label class="panel-label"
+                    for="panel-5-ctrl">Vozzoa</label>
+                </li>
+                <label id="close-nav-label" for="nav-ctrl">Close</label>
+                </ul>
+        
+                <!-- THE PANELS -->
+                <article id="panels">
+                    <div class="container">
+                        <section id="panel-1">
+                        <main>
+                            <img src="img/finamex mockup 45.png" alt="">
+
+                        </main>                 
+                        </section>
+        
+                        <section id="panel-2">
+                        <main>
+                                <div style="margin: auto; height: auto;" class="embed-container">
+                                    <iframe src="https://lentespurpura.com/" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                        </main>
+                        </section>
+        
+                        <section id="panel-3">
+                        <main>
+                                <div style="margin: auto; height: auto;" class="embed-container">
+                                    <iframe src="https://www.bodyssage.com.mx/" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                        </main>
+                        </section>
+        
+                        <section id="panel-4">
+                        <main>
+                                <div style="margin: auto; height: auto;" class="embed-container">
+                                    <iframe src="https://timeassistance.com.mx" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                        </main>
+                        </section>
+
+                            <section id="panel-5">
+                                <main>
+                                    <div style="margin: auto; height: auto;" class="embed-container">
+                                        <iframe src="https://vozzoa.com" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                </main>
+                            </section>
+                    </div>
+                </article>
+
+                <!--
+                    
+                    <section>
+                        <div style="margin: auto; width: 80%; height: auto;" class="embed-container">
+                            <iframe src="https://timeassistance.com.mx" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                -->
+                    
+                    <footer class="container dark-container">
+                        <img src="img/vozzoa-sello.svg"  class="footer-icon" alt="">
+                        <div class="class-center d-flex flex-column">
+                <div class="class-center d-flex flex-column">
+                    <p class="text-center negative">Copyright 2022 © vozzoa </br>by Fernanda Domínguez</p>     </div>
+                </footer>
+            </body>
+
+  <script src="main.js"></script>
+
+  </html>
