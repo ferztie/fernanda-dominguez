@@ -12,44 +12,47 @@
     opacity: .2;
   }
   .item:hover {
-      flex: 9;
+      flex: 6;
       opacity: 1;
-      transition: flex 1s ease-in-out;
-      background-position: center;
+      transform: scale(1);
+      background-position:top;
     }
   
   .item-1 { 
-    background-image: url('../img/Bodyssage/Bodyssage-mobile\ MU.png');
+    background-image: url('../img/Vozzoa/planet.png');
   }
   .item-1:hover { 
-    background-image: url('../img/Bodyssage/Bodyssage-mobile\ MU.png');
+    background-image: url('../img/Vozzoa/planet.png');
   }
   
   .item-2 { 
-    background-image: url('../img/Bodyssage/bodyssage-mockup1.jpeg');
+    background-image: url('../img/Vozzoa/coolorss.png');
   }
   .item-2:hover { 
-    background-image: url('../img/Bodyssage/bodyssage-mockup1.jpeg');
+    background-image: url('../img/Vozzoa/coolorss.png');
   }
   
   .item-3 { 
-    background-image: url('../img/Bodyssage/Bodyssageweb1.png');
+    background-image: url('../img/Vozzoa/stars.png');
   }
   .item-3:hover { 
-    background-image: url('../img/Bodyssage/Bodyssageweb1.png');
+    background-image: url('../img/Vozzoa/stars.png');
+    background-position:bottom;
+
   }
   
   .item-4 { 
-    background-image: url('../img/Bodyssage/Bodyssage-mobile\ MU.png');
+    background-image: url('../img/Vozzoa/wireframes.png');
   }
   .item-4:hover { 
-    background-image: url('../img/Bodyssage/Bodyssage-mobile\ MU.png');
+    background-image: url('../img/Vozzoa/wireframes.png');
+    background-position:center;
   }
   
   .item-5 { 
-    background-image: url('../img/Bodyssage/bodyssage\ tablet\ movil2.png');
+    background-image: url('../img/Vozzoa/stars2.png');
   }
   .item-5:hover { 
-    background-image: url('../img/Bodyssage/bodyssage\ tablet\ movil2.png');
+    background-image: url('../img/Vozzoa/stars2.png');
   }
   

@@ -2,7 +2,7 @@
     --fuenteHeading: 'Montserrat', sans-serif;
     --fuenteParrafos: 'Montserrat', sans-serif;
 
-    --primario: #940077;
+    --primario: #ff0090;
     --secundario: #ff0000;
     --triada: #591BC5;
     --logo: #A3FFDB;
@@ -15,7 +15,7 @@
     --primario-pale: #ff00e663;
     --secundario-pale: #a3fff385;
     --gris-pale: #88888874;
-    --grisclaro-pale: #dbdbdb7d;
+    --grisclaro-pale: #ffffff1a;
     --negative-pale: #ffffff4d;
     --dark-pale: #241d2968;
 
@@ -41,6 +41,7 @@ html {
 
 /*HEADER*/
 header {
+    z-index: 1;
     width: 100%;
     height: 5.7rem;
     background-color: var(--grisclaro);
@@ -253,6 +254,9 @@ justify-content: center;
 .text-center {
     text-align: center;
 }
+.text-end {
+    text-align: end;
+}
 .class-center {
     justify-content: center;
     align-items: center;
@@ -409,7 +413,6 @@ justify-content: center;
   }
 }
 
-
   /*IMG*/
     img {
         border-radius: 0.8rem;
@@ -431,8 +434,6 @@ justify-content: center;
         width: 32px;
       }
       
-    
-
   /*BUTTONS*/
     .btn {
         display: block;
@@ -471,7 +472,6 @@ justify-content: center;
     .primary-btn:hover a {
         color: var(--primario);
     }
-
 
     .secondary-btn {
         border: none;
@@ -714,7 +714,6 @@ max-width: 100%;
     .slider-item label{
     color: var(--negative);
     font-size: 2.4rem;
-    text-transform: uppercase;
 
     }
     .slider-item:hover label{

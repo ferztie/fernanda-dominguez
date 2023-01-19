@@ -1,7 +1,6 @@
 ul#tabs-list {
   list-style: none;
   text-align: center;
-  border-bottom: 1px solid var(--negative);
   margin: 0;
   padding: 0;
 }
@@ -59,6 +58,12 @@ label.panel-label:hover {
 }
 
 #panel-5-ctrl:checked ~ #panels #panel-5 main {
+  max-height: initial;
+  opacity: 1;
+  padding: 48px 24px;
+}
+
+#panel-6-ctrl:checked ~ #panels #panel-6 main {
   max-height: initial;
   opacity: 1;
   padding: 48px 24px;
@@ -164,10 +169,29 @@ label.panel-label:hover {
     height: 6px;
   }
 
+  #panel-6-ctrl:checked ~ #tabs-list #li-for-panel-6 {
+    pointer-events: none;
+    cursor: default;
+    transform: translate3d(0, 1px, 0);
+    box-shadow: none;
+  }
+  #panel-6-ctrl:checked ~ #tabs-list #li-for-panel-6.last {
+    border-right: 1px solid transparent;
+  }
+  #panel-6-ctrl:checked ~ #tabs-list #li-for-panel-6 + li {
+    border-left: 1px solid var(--negative);
+  }
+  #panel-6-ctrl:checked ~ #tabs-list #li-for-panel-6 label.panel-label {
+    color: var(--primario);
+    padding-top: 26px;
+  }
+  #panel-6-ctrl:checked ~ #tabs-list #li-for-panel-6 label.panel-label::after {
+    height: 6px;
+  }
+
   ul#tabs-list {
     text-align: center;
-    border-bottom: 1px solid var(--negative);
-  }
+    }
   ul#tabs-list li {
     display: inline-block;
     text-align: center;
@@ -196,7 +220,6 @@ label.panel-label:hover {
   main {
     width: 99%;
     margin: 0 auto;
-    height: 700px;
   }
 }
 .panel-radios {
@@ -223,6 +246,9 @@ display: none;
     display: none;
 }
 .panel-radios:nth-child(6) {
+  display: none;
+}
+.panel-radios:nth-child(7) {
   display: none;
 }
 
