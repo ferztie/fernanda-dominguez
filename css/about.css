@@ -1,0 +1,59 @@
+
+.avatar {
+  height: 50%;
+  background-position: center;
+  animation: avatar 20s none infinite;
+}
+
+@keyframes avatar {
+  0% {
+    background-image: url('../img/Ilustrations/PNG/avatar-9.png');
+  }
+  10% {
+    background-image: url('../img/Ilustrations/PNG/avatar-1.png');
+  }
+  15% {
+    background-image: url('../img/Ilustrations/PNG/avatar-2.png');
+  }
+  20% {
+    background-image: url('../img/Ilustrations/PNG/avatar-3.png');
+    }
+  45% {
+    background-image: url('../img/Ilustrations/PNG/avatar-4.png');
+  }
+  60% {
+    background-image: url('../img/Ilustrations/PNG/avatar-5.png');
+  }
+  65% {
+    background-image: url('../img/Ilustrations/PNG/avatar-6.png');
+  }
+  90% {
+    background-image: url('../img/Ilustrations/PNG/avatar-7.png');
+  }
+  100% {
+    background-image: url('../img/Ilustrations/PNG/avatar-8.png');
+  }
+}
+
+
+.avatar-container {
+  transform: scale(0.5);
+  width: 45rem;
+  height: 51rem;
+}
+
+/*
+.item {
+  transition: flex 1s ease-in-out;
+}
+
+.item-1 { 
+  background-position: center;
+  background-image: url('../img/Ilustrations/SVG/avatar-2.png');
+  transform: scale(.7);
+}
+.item-1:hover { 
+  background-image: url('../img/Ilustrations/SVG/avatar-4.png');
+  transform: scale(.7);
+}
+*/

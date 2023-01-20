@@ -52,3 +52,17 @@
     background-image: url('../img/LentesP/lentespurpura-donatives.png');
   }
   
+  .mobile-item {
+    flex: .3;
+    height: 100%;
+    background-position:left;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 1s ease-in-out;
+    opacity: .2;
+  }
+  .mobile-item:hover {
+      opacity: 1;
+      transform: scale(1);
+      background-position:center;
+    }

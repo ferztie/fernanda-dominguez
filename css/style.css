@@ -2,15 +2,15 @@
     --fuenteHeading: 'Montserrat', sans-serif;
     --fuenteParrafos: 'Montserrat', sans-serif;
 
-    --primario: #ff0090;
+    --primario: #9f00dec7;
     --secundario: #ff0000;
-    --triada: #591BC5;
+    --triada: #c600f2;
     --logo: #A3FFDB;
     --acento: #e1ff00;
     --gris: #888888;
     --grisclaro: #ececec;
     --negative: #ffffff;
-    --dark: #000000;
+    --dark: #1d000e;
 
     --primario-pale: #ff00e663;
     --secundario-pale: #a3fff385;
@@ -227,6 +227,14 @@ h5 {
 
 .d-none {
     display: none;
+}
+
+.display-down {
+    display: none;    
+}
+
+.display-down div a {
+    padding: 1.6rem 14.2rem;
 }
 
  .absolute {
@@ -713,7 +721,7 @@ max-width: 100%;
     }
     .slider-item label{
     color: var(--negative);
-    font-size: 2.4rem;
+    font-size: 2rem;
 
     }
     .slider-item:hover label{
@@ -809,6 +817,9 @@ max-width: 100%;
 @media only screen and (max-width: 800px) {
     .display-up {
         display: none;    
+    }
+    .display-down {
+        display: block;    
     }
       .w-100{
         width: 100%;  
@@ -1008,7 +1019,7 @@ max-width: 100%;
         }
     }
 
-    .avatar {
+    .float {
         animation: float 6s ease-in-out infinite;
     }
 
