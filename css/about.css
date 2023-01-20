@@ -2,7 +2,7 @@
 .avatar {
   height: 50%;
   background-position: center;
-  animation: avatar 20s none infinite;
+  animation: avatar 20s ease infinite;
 }
 
 @keyframes avatar {
