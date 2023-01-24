@@ -1,6 +1,6 @@
 .modal-window {
   position: fixed;
-  background-color: var(--dark-pale);
+  background-color: var(--opposite-pale);
   top: 0;
   right: 0;
   bottom: 0;
@@ -10,6 +10,7 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s;
+  display: none;
 }
 @media (max-width: 768px) {
   .modal-window  {
@@ -18,6 +19,7 @@
 }
 
 .modal-window:target {
+  display: block;
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
@@ -35,7 +37,7 @@
     transform: translate(-50%, -50%);
     padding: 2em;
     max-height: 1000px;
-    background: var(--negative);
+    background: var(--fondo);
   }
 
   @media (max-width: 768px) {
@@ -53,13 +55,12 @@
   }
 
 .modal-close {
-  color: rgb(255, 0, 0);
   line-height: 50px;
-  font-size: 80%;
+  font-size: 3rem;
   position: absolute;
-  right: 0;
+  right: 15px;
   text-align: center;
-  top: 0;
+  top: 15px;
   width: 70px;
   text-decoration: none;
 }
@@ -74,7 +75,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--texto);
   text-decoration: none;
 }
 
@@ -92,14 +93,14 @@ a {
 }
 
 small {
-  color: lightgray;
+  color: var(--acento);
 }
 
 .btn-modal a {
   content:'💁🏻‍♀️';
   top: 6rem;
   background-color: transparent;
-  padding: 15rem 21rem;
+  padding: 15rem 50rem;
   border-radius: 0.5rem;
   text-decoration: none;
   position: absolute;

@@ -63,10 +63,16 @@
     background-size: cover;
     background-repeat: none;
     transition: flex 1s ease-in-out;
-    opacity: .2;
+    opacity: .8;
   }
   .mobile-item:hover {
       opacity: 1;
       transform: scale(1);
       background-position:center;
     }
+    
+    .card-mobile {
+      margin: 0 1rem;
+      min-width: 50rem;
+      border-radius: 1.2rem;
+  }

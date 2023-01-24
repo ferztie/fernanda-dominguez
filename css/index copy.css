@@ -1,0 +1,184 @@
+html {
+  color-scheme: light;
+}
+
+html:has(body > #switch:checked) {
+  color-scheme: dark;
+}
+  
+  
+  .avatar-container {
+    transform: scale(0.5);
+    width: 45rem;
+    height: 51rem;
+  }
+
+
+  body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--negative);
+  }
+
+.body {
+  background-color: var(--gray);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .1s;
+}
+/* Main Circle */
+.main-circle {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 100%;
+  background: linear-gradient(40deg, #FF0080,#FF8C00 70%);
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -70%)
+}
+
+/* Phone */
+.phone {
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+  width: 20rem;
+  background-color: inherit;
+}
+
+.swipe {
+  width: 40%;
+  height:.25rem;
+  background-color: black;
+  opacity: .15;
+  border-radius: 10px;
+  margin: .5rem auto;
+}
+
+/* Middle */
+.content {
+  display: flex;
+  width: 15%;
+}
+.circle {
+  position: relative;
+  border-radius: 100%;
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(40deg, #FF0080,#FF8C00 70%);
+  margin: auto;
+}
+.crescent {
+  position: absolute;
+  border-radius: 100%;
+  right: 0;
+  width: 6rem;
+  height: 6rem;
+  background: white;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: transform .6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.heading {
+  font-size: 140%;
+  font-weight: bolder;
+  margin: 3rem 0 .2rem 0;
+}
+label, .toggle {
+  height: 3.2rem;
+  border-radius: 100px;
+}
+
+label {
+  width: 100%;
+  border-radius: 100px;
+  margin-top: 1.4rem; 
+  cursor: pointer;
+}
+.toggle {
+  position: absolute;
+  width: 16%;
+  background-color: var(--dark);
+  box-shadow: 0 2px 15px rgba(0,0,0,.15);
+  transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.names {
+  font-size: 90%;
+  font-weight: bolder;
+  width: 16%;
+  margin-top: .5%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+.dark-toggle {
+  opacity: .5;
+}
+.mark {
+  border-radius: 100px;
+  background-color: black;
+}
+.mark {
+  width: 7%;
+  margin: auto;
+  position: relative;
+  height: .25rem;
+}
+.mark::before {
+  content: '';
+  position: absolute;
+  width: .25rem;
+  height: 100%;
+  left: -70%;
+  opacity: .15;
+  background-color: inherit;
+}
+.mark::after {
+  content: '';
+  position: absolute;
+  width: .25rem;
+  height: 100%;
+  right: -70%;
+  opacity: .15;
+  background-color: inherit;
+}
+
+/* -------- Switch Styles ------------*/
+[type="checkbox"] {
+  display: none;
+}
+html:has(body > #switch:checked) {
+  color-scheme: dark;
+}
+  
+/* Toggle */
+[type="checkbox"]:checked + .default-container{
+  background-color: var(--acento);
+  z-index: 2;
+}
+[type="checkbox"]:checked + .app .toggle{
+  transform: translateX(100%);
+  background-color: var(--acento);
+}
+/* Circle */
+[type="checkbox"]:checked + .app .crescent{
+  transform: scale(0.4);
+  left: 0.4rem;
+  background: #261825;
+}
+/* Fab */
+[type="checkbox"]:checked + .app .fab{
+  background-color: #34323D;
+}
+[type="checkbox"]:checked + .app .network{
+  border-color: transparent transparent white transparent;
+}
+[type="checkbox"]:checked + .app .swipe{
+  background-color: #34323D;
+  opacity: 1;
+}

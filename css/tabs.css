@@ -10,10 +10,8 @@ label.panel-label {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  display: block;
   width: 100%;
   cursor: pointer;
-  transition-property: background-color, color;
   transition-duration: 200ms;
 }
 
@@ -89,6 +87,7 @@ label.panel-label:hover {
   #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 label.panel-label::after {
     height: 6px;
   }
+  
   #panel-2-ctrl:checked ~ #tabs-list #li-for-panel-2 {
     pointer-events: none;
     cursor: default;
@@ -253,8 +252,6 @@ display: none;
 }
 
 body {
-  background:var(--primario);
-  color: #444444;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
 

@@ -9,29 +9,35 @@
   0% {
     background-image: url('../img/Ilustrations/PNG/avatar-9.png');
   }
-  10% {
+  1% {
     background-image: url('../img/Ilustrations/PNG/avatar-1.png');
   }
-  15% {
+  2% {
     background-image: url('../img/Ilustrations/PNG/avatar-2.png');
   }
-  20% {
+  3% {
     background-image: url('../img/Ilustrations/PNG/avatar-3.png');
     }
-  45% {
+  4% {
     background-image: url('../img/Ilustrations/PNG/avatar-4.png');
   }
-  60% {
+  5% {
     background-image: url('../img/Ilustrations/PNG/avatar-5.png');
   }
-  65% {
+  6% {
     background-image: url('../img/Ilustrations/PNG/avatar-6.png');
   }
-  90% {
+  7% {
     background-image: url('../img/Ilustrations/PNG/avatar-7.png');
   }
-  100% {
+  8% {
     background-image: url('../img/Ilustrations/PNG/avatar-8.png');
+  }
+  9% {
+    background-image: url('../img/Ilustrations/PNG/avatar-9.png');
+  }
+  100% {
+    background-image: url('../img/Ilustrations/PNG/avatar-1.png');
   }
 }
 

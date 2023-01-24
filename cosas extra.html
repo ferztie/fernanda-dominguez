@@ -89,159 +89,7 @@
                 </div>
             </div>                
         </div>       
-
-
-                <!-- TAB CONTROLLERS -->
-        <input id="panel-1-ctrl"
-        class="panel-radios" type="radio" name="tab-radios" checked>
-        <input id="panel-2-ctrl"
-        class="panel-radios" type="radio" name="tab-radios">
-        <input id="panel-3-ctrl"
-        class="panel-radios" type="radio" name="tab-radios">
-        <input id="panel-4-ctrl"
-        class="panel-radios" type="radio" name="tab-radios">
-        <input id="panel-5-ctrl"
-        class="panel-radios" type="radio" name="tab-radios">
-        <input id="nav-ctrl"
-        class="panel-radios" type="checkbox" name="nav-checkbox">
-        
-        <!-- TABS LIST -->
-        <ul id="tabs-list">
-        <!-- MENU TOGGLE -->
-        
-        <label id="open-nav-label" for="nav-ctrl"></label>
-        <li id="li-for-panel-1">
-        <label class="panel-label card container tablink primary-container class-center slider-item"
-            for="panel-1-ctrl">Radio Toggles</label>
-        </li><!--INLINE-BLOCK FIX
-
-        --><li id="li-for-panel-2">
-        <label class="panel-label"
-            for="panel-2-ctrl">Input :checked</label>
-        </li><!--INLINE-BLOCK FIX
-
-        --><li id="li-for-panel-3">
-        <label class="panel-label"
-            for="panel-3-ctrl">The Tabs</label>
-        </li><!--INLINE-BLOCK FIX
-
-        --><li id="li-for-panel-4">
-        <label class="panel-label"
-            for="panel-4-ctrl">Tab :hover</label>
-        </li><!--INLINE-BLOCK FIX
-
-        --><li id="li-for-panel-5" class="last">
-        <label class="panel-label"
-            for="panel-5-ctrl">Menu</label>
-        </li>
-        <label id="close-nav-label" for="nav-ctrl">Close</label>
-        </ul>
-
-        <!-- THE PANELS -->
-        <article id="panels">
-            <div class="container">
-                <section id="panel-1">
-                <main>
-                <h1>Radio Toggles</h1>
-                <p>In this demo, <code>labels</code> for hidden <code>radios</code> toggle the content. This is based on the behavior in which clicked <code>labels</code> for a <code>radio</code> or <code>checkbox</code> input will check that <code>input</code>.</p> 
-                <pre>&lt;input id="radio-1" type="radio" name="demo-radios"&gt;
-                &lt;input id="radio-2" type="radio" name="demo-radios"&gt;</pre>
-                #radio-1: <input id="radio-1" type="radio" name="demo-radios"> #radio-2: <input id="radio-2" type="radio" name="demo-radios">
-                <pre>&lt;label for="radio-1"&gt;Toggle #radio-1&lt;/label&gt;
-                &lt;label for="radio-2"&gt;Toggle #radio-2&lt;/label&gt;</pre>
-                <label for="radio-1" class="demo-label">Toggle #radio-1</label>
-                <label for="radio-2" class="demo-label">Toggle #radio-2</label>
-                <p>Click one of the labels above and see its effect on the radios above it.</p>
-                <p>The radios for this pen's tabs are displayed semi-transparently at the top of this demo page.</p>
-                </main>
-                </section>
-
-                <section id="panel-2">
-                <main>
-                <h1>Input :checked</h1>
-                <p>In CSS, you can query based on the <code>:checked</code> selector for <code>radios</code> and <code>checkboxes</code> to style siblings down the DOM scope. To do this, we can use the <code>~</code>. It will select same-level siblings after the given selector. Because the tab <code>labels</code> in this demo are nested and not immediate siblings, we will need to select their topmost parent that is at the same level as our <code>input</code>.</p>
-                <p>To demonstrate, we will do a simplified version of this with a checkbox:</p>
-                <pre><strong>&lt;!-- invisible input and its label --&gt;</strong>
-                &lt;input id="demo-child-toggle" type="checkbox"&gt;
-                &lt;label for="demo-child-toggle"&gt;Toggle #demo-child&lt;/label&gt;
-
-                <strong>&lt;-- parent to select first via "~" --&gt;</strong>
-                &lt;div id="demo-parent"&gt;
-                <strong>&lt;-- child to select through parent --&gt;</strong>
-                &lt;div id="demo-child"&gt;#demo-child&lt;/div&gt;
-                &lt;/div&gt;</pre>
-                <p>and in our CSS:</p>
-                <pre><strong>/* hiding our checkbox */</strong>
-                #demo-child-toggle {
-                display: none;  
-                }
-                <strong>/* selecting the child */</strong>
-                #demo-child-toggle:checked ~ #demo-parent #demo-child {
-                color: #c0392b;
-                font-weight: bold;
-                text-transform: uppercase;
-                }</pre>
-                <hr>
-                <input id="demo-child-toggle" type="checkbox">
-                <label class="demo-label" for="demo-child-toggle">Toggle #demo-child</label>
-                <div id="demo-parent">
-                <div id="demo-child">#demo-child</div>
-                </div>
-                <hr>
-                <p>As you can see, we can control the style of content that comes after a hidden input by toggling it via its label.</p>
-                <p>At this point you can probably get the picture for how we can conditionally display the tabbed panel content in this pen.</p>
-                </main>
-                </section>
-
-                <section id="panel-3">
-                <main>
-                <h1>The Tabs</h1>
-                <p>Here is the basic form of a tab in this demo:</p>
-                <pre>&lt;li id="li-for-panel-1"&gt;
-                &lt;label class="panel-label" for="panel-1-ctrl"&gt;CSS Radio Toggles&lt;/label&gt;
-                &lt;/li&gt;</pre>
-                <p>For the "active" tab to cover the bottom border, the child <code>label</code> gets an additional 2 pixels of <code>padding-top</code> while its parent <code>li</code> gets a <code>translateY(1px)</code>. This not only covers the bottom border, but gives an ever-so-subtle "moving toward you" effect by shifting the title down <code>1px</code>.</p>
-                
-                <pre>#panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 {
-                transform: translate3d(0, 1px, 0);
-                }
-                #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 label.panel-label {
-                padding-top: 26px; <strong>/* instead of "24px" */</strong>
-                }</pre>
-                </main>
-                </section>
-
-                <section id="panel-4">
-                <main>
-                <h1>Tab :hover</h1>
-                <p>When designing the <code>:hover</code> and "active" states I had a dilemma.</p>
-                <pre>&lt;li id="li-for-panel-1"&gt;
-                &lt;label class="panel-label" for="panel-1-ctrl"&gt;CSS Radio Toggles&lt;/label&gt;
-                &lt;/li&gt;</pre>
-                <p>Each tab <code>li</code> has a <code>border-right</code>. But when the additional <code>border-top</code> appears, we dont want the lighter <code>border-right</code> to be shown all the way to the top. The fix for this is to cancel the <code>border-right</code> on both the <code>:hover</code> and "active" state as well as style the <code>li</code>'s next sibling's <code>border-left</code>.</p>
-                <p>To do this, we can use a combination of the siblings after <code>~</code> and sibling next <code>+</code> selectors:</p>
-                <pre><strong>/* remove the right border on "active" state */</strong>
-                #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 {
-                border-right: none;
-                }
-                <strong>/* add left to next sibling */</strong>
-                #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 + li {
-                border-left: 1px solid #dfdfdf;
-                }</pre>
-                </main>
-                </section>
-                <section id="panel-5">
-                <main>
-                <h1>Menu</h1>
-                <p>On small screens, the tabs fold down into an expandable menu. To trigger the menu, I use a <code>checkbox</code> (note that it appears at the top of the screen on smaller screen sizes). There are two labels that trigger this checkbox. One opens and the other closes the menu. The one that opens is absolutely positioned invisibly over the "active" menu item. The closing label is at the bottom of the open menu.</p>
-                <p>The best way I have found to show and hide content without using absolute positioning is to use a combination of <code>max-height</code> and <code>opacity</code>. When "inactive", the content has a <code>max-height: 0</code> and <code>opacity: 0</code>.</p>
-                <p>It also has a <code>transition: opacity</code> when I don't know the future height (this panel's content for example) and <code>transition: opacity, max-height</code> when I do know the future height (like the menu). When "active", the <code>max-height</code> and <code>opacity</code> get positive values and the content will transition in. I'm sure flexbox could get me around this hack, but this works for now.</p>   
-                </main>
-                </section>
-            </div>
-        </article>
     
-            <!-- Tabs 
                 <div class="tab gray-container p-3"> 
                     <div class="d-flex row dinamic-col class-center">
                         <div class="p-3 align-center">
@@ -257,180 +105,37 @@
                             <div class="pb-4">
                                 <a class="pb-3 pointer d-flex slider-item " href="concurso.html" title="Concursa"> 
                                     <img src="img/1x/vozzoa-img web-finamex 2.png"  style="width: 136px;" alt="">
-                                    <p class="negative pl-1 m-0">Time Assistance Services</p>
+                                    <p class="negative pl-1 pt-3 m-0">Time Assistance Services</p>
                                 </a>
                             
                                 <div class="pb-3 d-flex slider-item">   
                                     <img src="img/1x/vozzoa-img brochure.png"  style="width: 136px;" alt="">
-                                    <p class="negative pl-1 m-0">Lentes Púrpura</p>
+                                    <p class="negative pl-1 pt-3 m-0">Lentes Púrpura</p>
                                 </div>
             
                                 <div class="pb-3 d-flex slider-item">   
                                     <img src="img/1x/vozzoa-img mobil-lentespurpura.png"  style="width: 136px;"alt="">
-                                    <p class="negative pl-1 m-0">Bodyssage</p>
+                                    <p class="negative pl-1 pt-3 m-0">Bodyssage</p>
                                 </div>
             
                                 <a class="pb-3 pointer d-flex slider-item " href="concurso.html" title="Concursa">                     
                                     <img src="img/1x/vozzoa-img timeassistance-web.png"  style="width: 136px;" alt="">
-                                    <p class="negative pl-1 m-0">IncluyTe</p>
+                                    <p class="negative pl-1 pt-3 m-0">IncluyTe</p>
                                 </a>
                             
                                 <div class="pb-3 d-flex slider-item">
                                     <img src="img/1x/vozzoa-img web-finamex 2.png"  style="width: 136px;" alt="">
-                                    <p class="negative pl-1 m-0">SkyGarden</p>
+                                    <p class="negative pl-1 pt-3 m-0">SkyGarden</p>
                                 </div>
             
                                 <div class="pb-3 d-flex slider-item">   
                                     <img src="img/1x/vozzoa-img bodyssage-web.png"  style="width: 136px;"alt="">
-                                    <p class="negative pl-1 m-0 uppercase ">Vozzoa - IT</p>
+                                    <p class="negative pl-1 pt-3 m-0 uppercase ">Vozzoa - IT</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                --> 
-            <!-- Tabs  
-                <div class="tab gray-container p-3"> 
-                <div class="d-flex row dinamic-col class-center">
-                <div class="p-3 align-center">
-                    <a href="img/imagen-vacia.png"><img src="img/1x/vozzoa-img web-finamex.png" alt=""></a>
-                        <div class="pl-1-sm">
-                            <p class="negative fs-22 pt-1 m-0">UI</p>
-                            <p class="fs-22 m-0 negative"> 💵 Casa de Bolsa 📈</p> 
-                            <p class="fs-18 gray negative m-0">
-                                Implementación del rediseño en Ionic6 y Bootstrap</p> 
-                        </div>
-                </div>
-                <div class="slider-container-y p-3">
-                    <div class="pb-4">
-                        <a class="pb-3 pointer d-flex slider-item " href="concurso.html" title="Concursa"> 
-                            <img src="img/1x/vozzoa-img web-finamex 2.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">Time Assistance Services</p>
-                        </a>
-                    
-                        <div class="pb-3 d-flex slider-item">   
-                            <img src="img/1x/vozzoa-img brochure.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">Lentes Púrpura</p>
-                        </div>
-    
-                        <div class="pb-3 d-flex slider-item">   
-                            <img src="img/1x/vozzoa-img mobil-lentespurpura.png"  style="width: 136px;"alt="">
-                            <p class="negative pl-1 m-0">Bodyssage</p>
-                        </div>
-    
-                        <a class="pb-3 pointer d-flex slider-item " href="concurso.html" title="Concursa">                     
-                            <img src="img/1x/vozzoa-img timeassistance-web.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">IncluyTe</p>
-                        </a>
-                    
-                        <div class="pb-3 d-flex slider-item">
-                            <img src="img/1x/vozzoa-img web-finamex 2.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">SkyGarden</p>
-                        </div>
-    
-                        <div class="pb-3 d-flex slider-item">   
-                            <img src="img/1x/vozzoa-img bodyssage-web.png"  style="width: 136px;"alt="">
-                            <p class="negative pl-1 m-0 uppercase ">Vozzoa - IT</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-    
-                <div class="tab gray-container p-3"> 
-                <div class="d-flex row dinamic-col class-center">
-                <div class="p-3 align-center">
-                    <a href="img/imagen-vacia.png"><img src="img/1x/vozzoa-img web-finamex.png" alt=""></a>
-                        <div class="pl-1-sm">
-                            <p class="negative fs-22 pt-1 m-0">UX</p>
-                            <p class="fs-22 m-0 negative"> 💵 Casa de Bolsa 📈</p> 
-                            <p class="fs-18 gray negative m-0">
-                                Implementación del rediseño en Ionic6 y Bootstrap</p> 
-                        </div>
-                </div>
-                <div class="slider-container-y p-3">
-                    <div class="pb-4">
-                        <a class="pb-3 pointer d-flex slider-item " href="concurso.html" title="Concursa"> 
-                            <img src="img/1x/vozzoa-img web-finamex 2.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">Time Assistance Services</p>
-                        </a>
-                    
-                        <div class="pb-3 d-flex slider-item">   
-                            <img src="img/1x/vozzoa-img brochure.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">Lentes Púrpura</p>
-                        </div>
-    
-                        <div class="pb-3 d-flex slider-item">   
-                            <img src="img/1x/vozzoa-img mobil-lentespurpura.png"  style="width: 136px;"alt="">
-                            <p class="negative pl-1 m-0">Bodyssage</p>
-                        </div>
-    
-                        <a class="pb-3 pointer d-flex slider-item " href="concurso.html" title="Concursa">                     
-                            <img src="img/1x/vozzoa-img timeassistance-web.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">IncluyTe</p>
-                        </a>
-                    
-                        <div class="pb-3 d-flex slider-item">
-                            <img src="img/1x/vozzoa-img web-finamex 2.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">SkyGarden</p>
-                        </div>
-    
-                        <div class="pb-3 d-flex slider-item">   
-                            <img src="img/1x/vozzoa-img bodyssage-web.png"  style="width: 136px;"alt="">
-                            <p class="negative pl-1 m-0 uppercase ">Vozzoa - IT</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-    
-                <div class="tab gray-container p-3"> 
-                <div class="d-flex row dinamic-col class-center">
-                <div class="p-3 align-center">
-                    <a href="img/imagen-vacia.png"><img src="img/1x/vozzoa-img web-finamex.png" alt=""></a>
-                        <div class="pl-1-sm">
-                            <p class="negative fs-22 pt-1 m-0">UXE</p>
-                            <p class="fs-22 m-0 negative"> 💵 Casa de Bolsa 📈</p> 
-                            <p class="fs-18 gray negative m-0">
-                                Implementación del rediseño en Ionic6 y Bootstrap</p> 
-                        </div>
-                </div>
-                <div class="slider-container-y p-3">
-                    <div class="pb-4">
-                        <a class="pb-3 pointer d-flex slider-item " href="concurso.html" title="Concursa"> 
-                            <img src="img/1x/vozzoa-img web-finamex 2.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">Time Assistance Services</p>
-                        </a>
-                    
-                        <div class="pb-3 d-flex slider-item">   
-                            <img src="img/1x/vozzoa-img brochure.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">Lentes Púrpura</p>
-                        </div>
-    
-                        <div class="pb-3 d-flex slider-item">   
-                            <img src="img/1x/vozzoa-img mobil-lentespurpura.png"  style="width: 136px;"alt="">
-                            <p class="negative pl-1 m-0">Bodyssage</p>
-                        </div>
-    
-                        <a class="pb-3 pointer d-flex slider-item " href="concurso.html" title="Concursa">                     
-                            <img src="img/1x/vozzoa-img timeassistance-web.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">IncluyTe</p>
-                        </a>
-                    
-                        <div class="pb-3 d-flex slider-item">
-                            <img src="img/1x/vozzoa-img web-finamex 2.png"  style="width: 136px;" alt="">
-                            <p class="negative pl-1 m-0">SkyGarden</p>
-                        </div>
-    
-                        <div class="pb-3 d-flex slider-item">   
-                            <img src="img/1x/vozzoa-img bodyssage-web.png"  style="width: 136px;"alt="">
-                            <p class="negative pl-1 m-0 uppercase ">Vozzoa - IT</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-           -->
 
 
            Once upon a time, there was a brown haired Fernanda. Every day, she dream of becoming an artist. One day she had to choose a career and decided to study theater and acting, developing a keen eye and shapeshifting habilities, but it wasn’t her calling. Because of that, she jumped to a fashion career, where she could exploit and explore her creativity, she did and launched a fashion brand called Domínguez México and a fashion platform called Vuzzola. Because of that, she started wondering where would she sell and move her proyect, how could she develop an app or a e-commerce solution and boom, there she was designing interphases, becoming aware of the endeless possibilities, she became obsessed and desided to develop a career there. Until finally she had numerous clients and was hired to a beautiful company called Finamex, where she learned a lot and developed habilities that got her hired at a great telecommunications company in mexico called Totalplay.
@@ -456,3 +161,4 @@
     </footer>
 </body>
   </html>
+

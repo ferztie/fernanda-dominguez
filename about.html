@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: transparent;">
+<html lang="en">
 <head>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/stars.css">
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
 
@@ -18,9 +20,7 @@
     <link rel="icon" type="fav-icon" href="img/vozzoa-sello.svg" >
 </head>
 
-<body class="dark-container">
-<html>
-</html>
+<body class="">
 <header class="d-flex">
     <nav role="navigation">
         <div id="menuToggle">
@@ -31,101 +31,210 @@
         <ul id="menu">
             <a href="index.html"><li>Home</li></a>
             <a href="about.html"><li>About</li></a>
-            <a href="cv.html"><li>CV</li></a>
-            <a href="work.html" class="typo-change bold"><li>Work</li></a>
             <a href="https://www.behance.net/fernandadominguez" target="_blank"><li>Behance</li></a>
         </ul>
         </div>
     </nav>
-    <span>
-        <a href="index.html" style="font-size:3rem;" class="align-center d-flex pl-3 fs-22 bold"> 💫
-        </a>
-    </span>
-
+        <span>
+            <a href="index.html" style="font-size:3rem;" class="align-center d-flex pl-3 fs-22 bold"> 💫
+            </a>
+        </span>
     </header>
-    <!--
-        <div class="signup-space signup-stars"></div>
-    -->
+    <input type="checkbox" id="theme-toggle" /> 
+    <label class="toggle-btn"  for="theme-toggle"></label>
+    
+    <!-- WORK -->  
+    <section id="stars">
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </section>
 
-    <div class="d-flex d-block-sm justify-content-around">
-        <div class="container pb-3 ">
-            <h1 class="m-0 fw-300 bold negative uppercase pt-3">About</br></h1>
-        </div>
-        <div class="container-phantom mt-4 pb-4 mb-4">
-            <div class="d-flex justify-content-center">
-                <div class="pt-4 class-center img-container avatar-container avatar item item-1">
-                </div>
-            </div>
-            <div class="negative ">
-                <p class="m-0">
-                    Hello!
-                    My name is Fernanda Domínguez, a 30 years old Mexican interested in UX/UI design trends and everything code related.
-                </br>
-                    I´m an independent happy being, I´m adaptable, flexible, proactive and a people person, who loves teamwork, collaboration, and developing relationships.
-                    Also, I consider myself tech-savvy, loving to learn and expand my creativity canvas always looking for new solutions. I´m mostly a self-taught person in the IT world but I have studied dramatic arts, where I was totally deconstructed which gives me empathy to understand anyone, and a bachelor's degree in fashion design where I studied sociology, how trends are born, and cultural analysis.
-                </br>
-                    My work encompasses graphics and identity, websites and digital experiences, product development, strategy, and positioning.
-                    I enjoy developing interactive solutions and experiences for prototypes, web, and apps.
-                    I’ve been developing products (UI/UX) for 5 years and working in IT teams for 3 years.
-                </br>
-                    My technology skills include Adobe XD, Illustrator, and Photoshop, Figma. For coding structure, I use HTML and CSS, Angular IONIC 6, and Bootstrap, I use Visual Studio Code and also Visual Studio. For Agile and teamwork, I’m comfortable working on Kanban boards, Jira, Sourcetree, Github, Slack, InVision, and Teams. I also have developed and managed WP.
-                    
-                </br>
-                    In my most recent work experiences for TotalPlay, I worked as a UXD, designing flows according to our client's needs for a Power BI alike product, called FFM Cloud for TotalPlay Empresarial, and before that my role also involved UXE duties, translating XD prototypes to Angular and Bootstrap, for a fintech company called Finamex.
-                </br>
-                    My designing/artistic background has given me empathic and analytic skills. Prioritizing a company's brand identity and design systems, always with the user at the center.
-                </br>
-                    I believe in pixel perfect and find a way to apply it to web development by designing prototypes and flows, being aware of the frameworks, and FrontEnd's ability to interpret them.
-                    
+            <!-- TAB CONTROLLERS -->
+            <input id="panel-1-ctrl"
+            class="panel-radios d-none" type="radio" name="tab-radios" checked>
+            <input id="panel-2-ctrl"
+            class="panel-radios d-none" type="radio" name="tab-radios">
+            <input id="panel-3-ctrl"
+            class="panel-radios d-none" type="radio" name="tab-radios">
+            <input id="panel-4-ctrl"
+            class="panel-radios d-none" type="radio" name="tab-radios">
+            <input id="panel-5-ctrl"
+            class="panel-radios d-none" type="radio" name="tab-radios">
+            <input id="panel-6-ctrl"
+            class="panel-radios d-none" type="radio" name="tab-radios">
 
-                </p>
-                    <!--
-                    <div class="text-center p-3">              
-                        <img style="width: 100px;" src="img/vozzoa-sello.svg" alt="about-me">
+            
+    <!-- THE PANELS -->
+        <article id="panels">
+            <div>
+                <section id="panel-1">
+                    <main>
+                    <div class="d-flex d-block-sm justify-content-around">
+                        <div class="container pb-3 ">
+                            <h1 class="m-0 fw-300 bold uppercase">Me</h1>
+                            <p class="gray">Web Development</p>
+                        </div>
+                        <div class="container-phantom d-flex mt-4 pb-4 mb-4 m-auto">
+                            <div>
+                                <div class="d-flex align-center justify-content-center">
+                                    <div>
+                                        <img style="height: 10rem;" src="img/Ilustrations/PNG/avatar-4.png" alt="">
+                                    </div>
+                                    <div class="pl-3">
+                                        <h5 class="m-0">
+                                            Hello
+                                            My name is Fernanda Domínguez, 
+                                        </h5>
+                                        <p class="m-0">
+                                            a 30 years old Mexican interested in UX/UI design trends and everything code related.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div> 
+                    </div>                
+                    </main>
+                </section>
+
+                <section id="panel-2">
+                    <main>
+                    <div class="d-flex d-block-sm ustify-content-around">
+                        <div style="min-width: 45rem;" class="container pb-3 ">
+                            <h1 class="m-0 fw-300 bold uppercase">Skills</h1>
+                            <p class="gray">Hard & Soft </p>
+                        </div>
+                            <div class="pl-3 pb-4 negative pt-4" >
+                                <h5 class="m-0">
+                                    I´m an independent happy being, I´m adaptable, flexible, proactive and a people person, who loves teamwork, collaboration, and developing relationships.                          </h5> 
+                            </br> 
+                                <p>
+                                    Also, I consider myself tech-savvy, loving to learn and expand my creativity canvas always looking for new solutions. I´m mostly a self-taught person in the IT world but I have studied dramatic arts, where I was totally deconstructed which gives me empathy to understand anyone, and a bachelor's degree in fashion design where I studied sociology, how trends are born, and cultural analysis.
+                                </p>             
+                            </div>
+                        </div>
+                    </main>
+                </section>
+
+                <section id="panel-3">
+                    <main>
+                        <div class="d-flex d-block-sm justify-content-around">
+                            <div style="min-width: 45rem;" class="container pb-3 ">
+                                <h1 class="m-0 fw-300 bold uppercase">Experience</h1>
+                                <p class="gray">Work</p>
+                            </div>
+                            <div class="pl-3 pb-4 negativ pt-4" >
+                                <h5 class="m-0">
+                                    My work encompasses graphics and identity, websites and digital experiences, product development, strategy, and positioning.                              
+                                </h5> 
+                            </br> 
+                                <p>
+                                    I enjoy developing interactive solutions and experiences for prototypes, web, and apps.
+                                    I’ve been developing products (UI/UX) for 5 years and working in IT teams for 3 years.
+                                </p> 
+                            </div>
                     </div>
-                        <p> 
-                            Hey there, my name is Fernanda, you could say I wasn’t born to fit in a box, I wanted to study piano for a living. 
-                            I got in a theater bachelor’s degree, until I got depressed but got really good, 
-                            discover a call in singing but also scenography and makeup.
-                            It was a mess. My urge to create couldn’t really fit in a scenery. (Well not in Mexico).
-                            </br>   
-                                So,  Where could I find a canvas for creativity and urge. Yes… Fashion.
+                    </main>
+                </section>
+
+                <section id="panel-4">
+                    <main>
+                        <div class="d-flex d-block-sm justify-content-around">
+                            <div style="min-width: 45rem;" class="container pb-3 ">
+                                <h1 class="m-0 fw-300 bold uppercase">Tech Skills</h1>
+                                <p class="gray">Design/code</p>
+                            </div>
+                            <div class="pl-3 pb-4 negative pt-4" >
+                                <h5 class="m-0">
+                                    Love to create products
+                                </h5> 
                             </br> 
-                        </p>
-                        <p>
-                            I changed to a Fashion Design Bachelor’s degree, in the Laureates University, UVM en Mexico’s city.
-                            Sociology, tendencies, collections, runways, fashion events, had so much fun. Made my greatest friends.
+                                <p>
+                                    My technology skills include Adobe XD, Illustrator, and Photoshop, Figma. For coding structure, I use HTML and CSS, Angular IONIC 6, and Bootstrap, I use Visual Studio Code and also Visual Studio. For Agile and teamwork, I’m comfortable working on Kanban boards, Jira, Sourcetree, Github, Slack, InVision, and Teams. I also have developed and managed WP.
+                                </p>       
+                            </div>
+                    </div>
+                    </main>
+                </section>
+
+                <section id="panel-5">
+                    <main>
+                        <div class="d-flex d-block-sm justify-content-around">
+                            <div style="min-width: 45rem;" class="container pb-3 ">
+                                <h1 class="m-0 fw-300 bold uppercase">What makes me singular</h1>
+                                <p class="gray">Work</p>
+                            </div>
+                            <div class="pl-3 pb-4 negative pt-4" >
+                                <h5 class="m-0">
+                                 TotalPlay y Finamex
+                                </h5> 
                             </br> 
-                            I, then started an editorial inclined platform to organize Mexico’s mess to get supplies.
-                            Boomer, that makes creation a lot slower :( 
-                                Taking fashion photos, and looking for suppliers., was born Vuzzola, compass in Italian.  I develop PR skills and got in great shows, and started collaborating with bigger firms. 
-                                More that a magazine, I wanted to deliver a more tech way to share this.
-                            </br> 
-                            Decided to make the web-app, I meet with a developer, presented the idea, he agreed to partner with the project but asked me for the interphase design… and I was there, designing an UI interphase for the first time in my life. 
-                            </br> 
-                        </p> 
-                        <p>
-                            It was fun, creative and useful. The developer disappeared  and I got distracted launching my fashion brand called Domínguez México, a leather’s good original design brand (not re-sellers  charade).
-                            Found investment with a former professor from the University, develop the product and started selling. 
-                            Urged to make my webpage I become keen in finding the most suitable way to develop my webpage, went through WIX, WordPress, and HTML CSS. 
-                            Youtube on one hand and on the other on my non-musical keyboard.
-                            </br> 
-                            I found my calling, developing web solutions, from the design of the interphase to some whole developments. 
-                            </br> 
-                            I enjoy the collaboration with other developers and designers, but also going solo it’s so fun. 
-                            </br> 
-                            I’m always learning new ways to solve things, and the story ends handsomely, I finally found the most unlimited form of creation.      
-                            <span style="width: 50%; margin: auto;" class="typo-change text-center neg"> < Coding > </span>
-                        </p>-->
+                                <p>
+                                    In my most recent work experiences for TotalPlay, I worked as a UXD, designing flows according to our client's needs for a Power BI alike product, called FFM Cloud for TotalPlay Empresarial, and before that my role also involved UXE duties, translating XD prototypes to Angular and Bootstrap, for a fintech company called Finamex.
+                                </p>       
+                            </div>
+                    </div>
+                    </main>
+                </section>
+
+                <section id="panel-6">
+                    <main>
+                        <div class="d-flex d-block-sm justify-content-around">
+                            <div style="min-width: 45rem;" class="container pb-3 ">
+                                <h1 class="m-0 fw-300 bold uppercase">My Singularities</h1>
+                                <p class="gray">Work</p>
+                            </div>
+                            <div class="pl-3 pb-4 negative pt-4" >
+                                <h5 class="m-0">
+                                    My designing/artistic background has given me empathic and analytic skills. Prioritizing a company's brand identity and design systems, always with the user at the center.
+                                </h5> 
+                                <p>
+                                    I believe in pixel perfect and find a way to apply it to web development by designing prototypes and flows, being aware of the frameworks, and FrontEnd's ability to interpret them
+                                </p>       
+                            </div>
+                    </main>
+                </section>
+
             </div>
-        </div> 
-    </div> 
-    <footer class="container dark-container">
-        <img src="img/vozzoa-sello.svg"  class="footer-icon" alt="">
-        <div class="class-center d-flex flex-column">
+
+            <ul id="tabs-list">
+                <label id="open-nav-label" for="nav-ctrl"></label>
+                <div class="slider-container tabs m-0">
+                        <li id="li-for-panel-1" class="secondary-container class-center slider-item card container " for="panel-1-ctrl">
+                            <label class="panel-label negative text-center"
+                                for="panel-1-ctrl">Me</label>
+                        </li>
+                        <li id="li-for-panel-2" class="secondary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center"
+                                for="panel-2-ctrl">Soft/Hard skills</label>
+                            </li>
+                        <li id="li-for-panel-3"class="secondary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center"
+                            for="panel-3-ctrl">Years of experience</label>
+                        </li>
+                        <li id="li-for-panel-4" class="secondary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center"
+                                for="panel-4-ctrl">Tech Skills</label>
+                            </li>
+                        <li id="li-for-panel-5" class="secondary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center"
+                                for="panel-5-ctrl">Latest work Experience</label>
+                            </li>
+                        <li id="li-for-panel-6" class="secondary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center"
+                                for="panel-6-ctrl">What makes me singular</label>
+                        </li>
+                </div>
+            </ul>
+        </article>
+
+
+        </body>
+        <footer class="container">
+
+            <img src="img/vozzoa-sello.svg"  class="footer-icon" alt="">
             <div class="class-center d-flex flex-column">
-                <p class="text-center negative">Copyright 2022 © vozzoa </br>by Fernanda Domínguez</p> 
-        </div>
-    </footer>
-</body>
+                <div class="class-center d-flex flex-column">
+                    <p class="text-center negative">Copyright 2022 © vozzoa </br>by Fernanda Domínguez</p> 
+            </div>
+        </footer>
 </html>

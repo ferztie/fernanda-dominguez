@@ -51,6 +51,39 @@
   .item-5:hover { 
     background-image: url('../img/TotalPlay/FFM-Cloud-5.png');
   }
+
+
+  .item-6 { 
+    background-image: url('../img/TotalPlay/Portada-Totalpay-01.png');
+  }
+  .item-7 { 
+    background-image: url('../img/TotalPlay/Proyecto-Totalpay-02.png');
+  }
+  .item-8 { 
+    background-image: url('../img/TotalPlay/Proyecto-Totalpay-03.png');
+  }
+  .item-9 { 
+    background-image: url('../img/TotalPlay/Proyecto-Totalpay-04.png');
+  }
+  .item-10 { 
+    background-image: url('../img/TotalPlay/Proyecto-Totalpay-05.png');
+  }
+  .item-11 { 
+    background-image: url('../img/TotalPlay/Proyecto-Totalpay-06.png');
+  }
+  .item-12 { 
+    background-image: url('../img/TotalPlay/Proyecto-Totalpay-07.png');
+  }
+  .item-13 { 
+    background-image: url('../img/TotalPlay/Proyecto-Totalpay-08.png');
+  }
+  .item-14 { 
+    background-image: url('../img/TotalPlay/Proyecto-Totalpay-09.png');
+  }
+  .item-15 { 
+    background-image: url('../img/TotalPlay/Proyecto-Totalpay-10.png');
+  }
+
   .mobile-item {
     flex: .3;
     height: 100%;
@@ -58,10 +91,25 @@
     background-size: cover;
     background-repeat: none;
     transition: flex 1s ease-in-out;
-    opacity: .2;
+    opacity: .8;
   }
   .mobile-item:hover {
       opacity: 1;
       transform: scale(1);
       background-position:center;
     }
+ .card-mobile {
+      margin: 0 1rem;
+      min-width: 50rem;
+      border-radius: 1.2rem;
+  }
+ .card-mobile-2 {
+      margin: 0 1rem;
+      min-width: 70rem;
+      border-radius: 1.2rem;
+  }
+ .card-mobile-2 a {
+  width: 100vh;
+  height: 54vh;
+  background-color: transparent;
+  }
