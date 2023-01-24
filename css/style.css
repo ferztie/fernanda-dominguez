@@ -220,7 +220,8 @@ body {
 
 /**GLOBALES**/
 p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 2;
     flex-wrap: wrap;
     color: var(--texto);
 }
@@ -237,6 +238,14 @@ h1 {
     font-size: 4.8rem;
     color: var(--texto);
 }
+.display h1 {
+    font-size: 8rem;
+    font-weight: 500;
+}
+.display .text-container {
+    max-width: 100rem;
+}
+
 .heading-var h1::after {
     content: var(--heading-hint);
   }
@@ -253,7 +262,7 @@ h4 {
     color: var(--texto);
 }
 h5 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 500;
     color: var(--texto);
 }
@@ -294,9 +303,6 @@ h5 {
 }
 .display-down div a {
     padding: 1.6rem 14.2rem;
-}
-.display h1 {
-    font-size: 6.4rem;
 }
  .absolute {
      position: absolute;
@@ -724,7 +730,7 @@ max-width: 100%;
 @media only screen and (max-width:800px) {
 
 .display h1 {
-    font-size: 4.6rem;
+    font-size: 5.6rem;
   }
   
 .dinamic-col {
@@ -874,8 +880,7 @@ max-width: 100%;
         }
         .container-phantom {
         max-width: 90%;
-        padding: 0.5rem;
-        padding: 1rem 2rem;
+        padding: 6rem 2rem 1rem 2rem;
         }
         
     }
