@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <script type="text/javascript" src="main.js"></script> 
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +41,7 @@
             </span>
         </header>
         <input type="checkbox" id="theme-toggle" /> 
-        <label class="toggle-btn"  for="theme-toggle"></label>
+        <label class="toggle-btn" onclick="toggleDarkLight()"  for="theme-toggle"></label>
 
         <!-- Intro -->  
         <section id="stars">
@@ -86,42 +87,56 @@
                         </p>
                     </div>
                 </div>
-                
                 <div class="slider-container tabs m-0">
-                    <ul id="tabs-list">
-                        <label id="open-nav-label" for="nav-ctrl"></label>
-                            <div class="slider-container tabs m-0">
-                                <li id="li-for-panel-1" class="primary-container class-center slider-item card container ">
-                                    <label class="panel-label negative text-center m-0"
-                                        for="panel-1-ctrl">Finamex</label>
-                                </li>
-                                <li id="li-for-panel-6" class="primary-container class-center slider-item card container ">
-                                        <label class="panel-label negative text-center m-0"
-                                            for="panel-5-ctrl">TotalPlay</label>
-                                </li>
-                                <li id="li-for-panel-2"class="primary-container class-center slider-item card container ">
-                                    <label class="panel-label negative text-center m-0"
-                                        for="panel-2-ctrl">Lentes Purpura</label>
-                                </li>
-                                <li id="li-for-panel-3" class="primary-container class-center slider-item card container ">
-                                    <label class="panel-label negative text-center m-0"
-                                        for="panel-3-ctrl">Bodyssage</label>
-                                </li>
-                                <li id="li-for-panel-4" class="primary-container class-center slider-item card container ">
-                                    <label class="panel-label negative text-center m-0"
-                                        for="panel-4-ctrl">Time Assistance</label>
-                                </li>
-                                <li id="li-for-panel-6" class="primary-container class-center slider-item card container ">
-                                    <label class="panel-label negative text-center m-0"
-                                        for="panel-6-ctrl">Vozzoa</label>
-                                </li>
-                                </ul>
+                    <a class="card container tablink primary-container class-center slider-item" block-sm>
+                            <h1 class="container negative text-center">Web Dev. </h1>
+                    </a>
+                    <a class="card container tablink primary-container class-center slider-item" block-sm>
+                            <h1 class="container negative text-center">UI</h1>
+                    </a>
+                    <a class="card container tablink primary-container class-center slider-item" block-sm>
+                        <h1 class="container negative text-center">UXD </h1>
+                    </a>
+                    <a class="card container tablink primary-container class-center slider-item" block-sm>
+                        <h1 class="container negative text-center">UXE</h1>
+                    </a>
                 </div>
+                
             </div>                
         </div>     
+        <section class="gray-container m-0">
+        <div class="tabs m-0">
+            <ul id="tabs-list">
+                <label id="open-nav-label" for="nav-ctrl"></label>
+                    <div class="slider-container tabs m-0">
+                        <li id="li-for-panel-1" class="primary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center m-0"
+                                for="panel-1-ctrl">Finamex</label>
+                        </li>
+                        <li id="li-for-panel-6" class="primary-container class-center slider-item card container ">
+                                <label class="panel-label negative text-center m-0"
+                                    for="panel-5-ctrl">TotalPlay</label>
+                        </li>
+                        <li id="li-for-panel-2"class="primary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center m-0"
+                                for="panel-2-ctrl">Lentes Purpura</label>
+                        </li>
+                        <li id="li-for-panel-3" class="primary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center m-0"
+                                for="panel-3-ctrl">Bodyssage</label>
+                        </li>
+                        <li id="li-for-panel-4" class="primary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center m-0"
+                                for="panel-4-ctrl">Time Assistance</label>
+                        </li>
+                        <li id="li-for-panel-6" class="primary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center m-0"
+                                for="panel-6-ctrl">Vozzoa</label>
+                        </li>
+                        </ul>
+        </div>
 
             <!-- WORK -->  
-        <section class="gray-container">
                     <!-- TAB CONTROLLERS -->
                     <input id="panel-1-ctrl"
                     class="panel-radios d-none" type="radio" name="tab-radios" checked>
@@ -145,11 +160,11 @@
                         <div class="d-flex d-block-sm mx-4 justify-content-around">
                             <div  style="min-width: 45rem;" class="container pb-3 ">
                                 <h1 class="m-0 fw-300  uppercase">Finamex</h1>
-                                <p>Web Development</p>
+                                <p>UXD & UXE</p>
                             </div>
                         <div class="pl-3 pb-4 " >
                             <h5 class="m-0">
-                                Finamex, Casa de Bolsa, una de las primeras casas de bolsa mexicanas en ingresar a los mercados internacionales. </h5>            
+                                Finamex, Casa de Bolsa is a pioneering Mexican stock exchange firm that entered the international market early on. With their expertise, you can rest assured that your investments are in good hands.</h5>            
                         </div>
                     </div>                
                     <div class="text-center">
@@ -167,7 +182,8 @@
                             </div>
                         <div class="pl-3 pb-4 " >
                             <h5 class="m-0">
-                                Lentes Púrpura consultora y asociación sin fines de lucro, enfocada en género y diversidad.</h5> 
+                                Lentes Púrpura is a non-profit consulting firm and association that focuses on gender and diversity. Their expert guidance can help your organization achieve greater inclusion and success.
+                            </h5> 
 
                         </div>
                     </div>
@@ -186,7 +202,7 @@
                             </div>
                         <div class="pl-3 pb-4 " >
                             <h5 class="m-0">
-                                Bodyssage y Face Move, son servicios especializados de masajes esculturales y de gimnasia facial.
+                                Bodyssage and Face Move provide specialized services for sculptural massages and facial gymnastics. Their experienced professionals will help you look and feel your best.
                             </h5>      
                         </div>
                     </div>
@@ -205,7 +221,8 @@
                             </div>
                         <div class="pl-3 pb-4" >
                             <h5 class="m-0">
-                                Asistenciadora experta en productos para gestión de la salud y soluciones para paquetes funararios.
+                                The health management product expert and funeral package solutions provider offers expert assistance in managing your health and planning for end-of-life. They provide compassionate support to ensure that you and your loved ones are taken care of.
+
                             </h5> 
                         </br> 
      
@@ -221,11 +238,11 @@
                         <div class="d-flex d-block-sm mx-4 justify-content-around">
                             <div style="min-width: 45rem;" class="container pb-3 ">
                                 <h1 class="m-0 fw-300  uppercase">TotalPlay</h1>
-                                <p>Web Development</p>
+                                <p>UX Design</p>
                             </div>
                         <div class="pl-3 pb-4 " >
                             <h5 class="m-0">
-                                TotalPlay es una importante plataforma de entretenimiento y conectividad de máxima calidad y tecnología, top of mind en México.               
+                                TotalPlay is a premier entertainment and connectivity platform in Mexico that offers cutting-edge technology and top-quality services. With TotalPlay, you can stay connected and entertained no matter where you are.           
                             </br>      
                         </div>
                     </div>
@@ -243,7 +260,7 @@
                             </div>
                         <div class="pl-3 pb-4" >
                         <h5 class="m-0">
-                            Agencia digital especializada en desarrollar páginas web personalizadas a pequeñas y medianas empresas.a facial.
+                            Digital agency specializes in personalized website development for small and medium-sized businesses. With their state-of-the-art technology and innovative solutions, they can help your business stand out in the crowded online marketplace.
                         </h5>        
                         </div>
                             </div>
