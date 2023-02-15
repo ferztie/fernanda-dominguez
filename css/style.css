@@ -1,6 +1,8 @@
 :root {
     --fuenteHeading: 'Montserrat', sans-serif;
-    --fuenteParrafos: 'Montserrat', sans-serif;
+    --fuenteParrafos: 'Lato', sans-serif; 
+    --fuenteArtsy: 'Noto Serif Tamil', serif;
+    --fuenteSpan: 'PT Serif', serif;
 
     --primario: #AC1EAA;
     --secundario: #8B26B9;
@@ -36,16 +38,16 @@
 
 html {
     box-sizing: inherit;
-    font-size: 62.5%;
+    font-size: 62.5%; /* 1 rem = 10px */   
     z-index: -2;
     color-scheme: light;
     color-scheme: dark;
     
-    --white: #fff7f7;
+    --white: #ffffff;
     --black: #14040c;
     
     --fondo: #0D0647;
-    --texto: #e0e0e0;
+    --texto: #e3e3e3;
     
     --gris: #ffffff;
     --grisclaro: #00000084;
@@ -55,15 +57,15 @@ html {
 
 html:has(body > #theme-toggle:checked) {
     --white: #fff7f7;
-    --black: #14040c;
+    --black: #775767;
     
     --fondo: #a280bc;
-    --texto:  #ffffff;
+    --texto:  #fff7f7;
     
     --gris: #ffffff;
-    --grisclaro: #ffffffbb;
+    --grisclaro: #9270a3bb;
     --negative: #f1e6ff;
-    --opposite: #14040c;
+    --opposite: #fff7f7;
 }
 
 *, *:before, *:after {
@@ -84,7 +86,6 @@ header {
 body {
     background-color: var(--fondo);
     font-family: var(--fuenteParrafos);
-    font-size: 1.6rem;
     line-height: 2;
     min-width: 50rem;
     overflow-x: hidden;
@@ -220,7 +221,9 @@ body {
 
 /**GLOBALES**/
 p {
+    font-family: var(--fuenteParrafos);
     font-size: 1.8rem;
+    font-weight: 300;
     line-height: 2;
     flex-wrap: wrap;
     color: var(--texto);

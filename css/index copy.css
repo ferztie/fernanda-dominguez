@@ -157,7 +157,7 @@ html:has(body > #switch:checked) {
 }
   
 /* Toggle */
-[type="checkbox"]:checked + .default-container{
+[type="checkbox"]:checked + .{
   background-color: var(--acento);
   z-index: 2;
 }

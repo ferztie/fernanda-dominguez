@@ -268,7 +268,6 @@ body {
 
 main h1 {
   margin-top: 0;
-  font-weight: 300;
   color: var(--primario);
 }
 main p {
