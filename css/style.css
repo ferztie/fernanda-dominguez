@@ -4,7 +4,7 @@
     --fuenteArtsy: 'Noto Serif Tamil', serif;
     --fuenteSpan: 'PT Serif', serif;
 
-    --primario: #AC1EAA;
+    --primario: #a60aa4;
     --secundario: #8B26B9;
     --triada: #3B13D2;
     --logo: #A3FFDB;
@@ -50,14 +50,14 @@ html {
     --texto: #e3e3e3;
     
     --gris: #ffffff;
-    --grisclaro: #00000084;
+    --grisclaro: #000000cf;
     --negative: #e0e0e0;
     --opposite: #ffffff;
 }
 
 html:has(body > #theme-toggle:checked) {
     --white: #fff7f7;
-    --black: #775767;
+    --black: #0d1220;
     
     --fondo: #a280bc;
     --texto:  #fff7f7;
@@ -202,7 +202,7 @@ body {
     border-radius: 0.9rem;
     background-color: var(--white);
     position: absolute;
-    top: 0.3rem;
+    top: 0.4rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     transition: left 200ms ease-in-out;
   }
@@ -242,7 +242,7 @@ h1 {
     color: var(--texto);
 }
 .display h1 {
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: 500;
 }
 .display .text-container {
