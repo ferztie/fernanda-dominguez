@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/stars.css">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,400&family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,200;1,400&family=Noto+Serif+Tamil:wght@100;400&family=PT+Serif:ital@0;1&family=Questrial&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link rel="icon" type="fav-icon" href="img/vozzoa-sello.svg" href="img/vozzoa-sello.svg">
+</head>
+<body>
+<header class="d-flex">
+    <nav role="navigation">
+        <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <a href="index.html"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="https://www.behance.net/fernandadominguez" target="_blank"><li>Behance</li></a> <a href="https://www.linkedin.com/in/fernanda-dom%C3%ADnguez-dise%C3%B1o-design-mex/" target="_blank"><li>LinkedIn</li></a>
+        </ul>
+        </div>
+    </nav>
+    
+        <span>
+            <a href="index.html" style="font-size:3rem;" class="align-center d-flex pl-3 fs-22 "><h4 class= "m-0" > Fernanda Domínguez </h4>
+            </a>
+        </span>
+    </header>
+    <input type="checkbox" id="theme-toggle" /> 
+    <label class="toggle-btn"  for="theme-toggle"></label>
+    
+    <!-- WORK -->  
+
+
+            <!-- TAB CONTROLLERS -->
+            <input id="panel-1-ctrl"
+            class="panel-radios d-none" type="radio" name="tab-radios" checked>
+            <input id="panel-2-ctrl"
+            class="panel-radios d-none" type="radio" name="tab-radios">
+            <input id="panel-3-ctrl"
+            class="panel-radios d-none" type="radio" name="tab-radios">
+            
+            
+    <!-- THE PANELS -->
+        <article id="panels">
+            <div>
+                <section id="panel-1">
+                    <main>
+                    <div class="display d-flex d-block-sm justify-content-around">
+                        <div class="d-flex mt-4 m-auto">
+                            <div class="align-center">
+                                <div class="d-flex flex-column align-center justify-content-center">
+                                    <div class="p-3">
+                                        <h1 class="m-0 negative">
+                                            Mexico City
+                                            Coyoacan
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div> 
+                    </div>                
+                    </main>
+                </section>
+
+                <section id="panel-2">
+                    <main>
+                        <div class="display d-flex d-block-sm justify-content-around">
+                            <div class="d-flex mt-4 m-auto">
+                                <div class="align-center">
+                                    <div class="d-flex flex-column align-center justify-content-center">
+                                        <div class="p-3">
+                                            <a href=" https://wa.me/5215521980031?text=Hello%20there!%20I'm%20interested%20in%20your%20profile%20or%20services." target="_blank">
+                                            <h1 class="m-0 negative">
+                                                +52 1 55 2198 0031
+                                            </h1></a>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </div> 
+                        </div>  
+                    </main>
+                </section>
+
+                <section id="panel-3">
+                    <main>
+                        <div class="display d-flex d-block-sm justify-content-around">
+                            <div class="d-flex mt-4 m-auto">
+                                <div class="align-center">
+                                    <div class="d-flex flex-column align-center justify-content-center">
+                                        <div class="p-3">
+                                            <h1 class="m-0 negative">
+                                                (GMT-6)
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>        
+                            </div> 
+                        </div>  
+                    </main>
+                </section>
+            </div>
+
+            <ul id="tabs-list">
+                <label id="open-nav-label" for="nav-ctrl"></label>
+                <div class="slider-container tabs m-0">
+                        <li id="li-for-panel-1" class="secondary-container class-center slider-item card container " for="panel-1-ctrl">
+                            <label class="panel-label negative text-center"
+                                for="panel-1-ctrl">City</label>
+                        </li>
+                        <li id="li-for-panel-2" class="secondary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center"
+                                for="panel-2-ctrl">Phone</label>
+                            </li>
+                        <li id="li-for-panel-3"class="secondary-container class-center slider-item card container ">
+                            <label class="panel-label negative text-center"
+                            for="panel-3-ctrl">Time Zone</label>
+                        </li>
+                </div>
+            </ul>
+        </article>
+        <footer class="container">
+            <div class="class-center d-flex flex-column">
+                <div class="class-center d-flex flex-column">
+                    <p class="text-center"> Copyright © 2017-2023 Fernanda Domínguez, All Rights Reserved.</p> 
+            </div>
+        </footer>
+        </body>
+</html>

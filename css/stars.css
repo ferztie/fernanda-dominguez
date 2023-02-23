@@ -1,7 +1,5 @@
-html {
-    height: 100%;
+body {
     background: var(Gradient);
-    overflow: scroll;
   }
   
   #stars {
