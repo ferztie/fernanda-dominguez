@@ -56,3 +56,5 @@ function translatePage(language) {
     // add more elements as needed
   }
   
+
+  

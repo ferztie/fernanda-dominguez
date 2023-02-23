@@ -22,8 +22,8 @@
 
     --primario-pale: #ff00e663;
     --secundario-pale: #a3fff385;
-    --gris-pale: #88888874;
-    --grisclaro-pale: #ffffff1a;
+    --gris-pale: #a1868674;
+    --grisclaro-pale: #8f2f8d34;
     --negative-pale: #ffffff4d;
     --opposite-pale: #23091a7a;
 
@@ -51,6 +51,7 @@ html {
     
     --gris: #ffffff;
     --grisclaro: #00154bae;
+    --gris-pale: #a1868674;
     --negative: #e0e0e0;
     --opposite: #ffffff;
 }
@@ -64,9 +65,49 @@ html:has(body > #theme-toggle:checked) {
     
     --gris: #ffffff;
     --grisclaro: #9270a3bb;
+    --gris-pale: #e1d7d7f4;
     --negative: #f1e6ff;
     --opposite: #fff7f7;
 }
+
+/*BODY*/
+
+/* Set the viewport width to the device width */
+@media screen and (max-width: 480px) {
+    /* CSS rules for devices with a maximum width of 480 pixels (e.g. phones) */
+    body {
+        background-color: var(--fondo);
+        font-family: var(--fuenteParrafos);
+        line-height: 2;
+        min-width: 20rem;
+        overflow-x: hidden;
+    }
+    /* Other CSS rules for small screens */
+  }
+  
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    /* CSS rules for devices with a width between 481 and 768 pixels (e.g. tablets) */
+    body {
+        background-color: var(--fondo);
+        font-family: var(--fuenteParrafos);
+        line-height: 2;
+        min-width: 50rem;
+        overflow-x: hidden;
+    }
+    /* Other CSS rules for medium-sized screens */
+  }
+  
+  @media screen and (min-width: 769px) {
+    /* CSS rules for devices with a width larger than 769 pixels (e.g. desktops) */
+    body {
+        background-color: var(--fondo);
+        font-family: var(--fuenteParrafos);
+        line-height: 2;
+        min-width: 50rem;
+        overflow-x: hidden;
+    }
+    /* Other CSS rules for large screens */
+  }
 
 *, *:before, *:after {
     box-sizing: inherit;
@@ -80,15 +121,6 @@ header {
     background-color: var(--grisclaro);
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.20);
     border-top: 0.2rem solid var(--primario);
-}
-
-/*BODY*/
-body {
-    background-color: var(--fondo);
-    font-family: var(--fuenteParrafos);
-    line-height: 2;
-    min-width: 50rem;
-    overflow-x: hidden;
 }
 
 /*MENU*/
@@ -407,17 +439,22 @@ justify-content: center;
 .container {
     padding: 1.6rem 3.2rem;
 }
+.container-contact {
+    padding: 3rem 6rem;
+}
 .primary-container {
     background: var(--gradient);
     animation: Gradient 10s ease infinite;
     border: 2px solid transparent;
     background-size: 400% 400%;
 }
-.primary-container h1{
+.primary-container:hover h1,
+.primary-container:hover h2,
+.primary-container:hover h3 {
     color: var(--negative);
 }
-.primary-container-pale {
 
+.primary-container-pale {
     color: var(--negative-pale);
 }
 .primary-container:hover {
@@ -426,7 +463,10 @@ justify-content: center;
     background: var(--negative);
     cursor: pointer;
 }
-.primary-container:hover h1 {
+
+.primary-container:hover h1,
+.primary-container:hover h2,
+.primary-container:hover h3 {
     color: var(--primario);
 }
     /*Transparente*/
@@ -595,6 +635,12 @@ justify-content: center;
     .primary {
         color: var(--primario);
     }
+    .primary-link {
+        color: var(--white);
+    }
+    .primary-link:hover {
+        color: var(--primario);
+    }
     .negative {
         color: var(--negative);
     }
@@ -604,7 +650,6 @@ justify-content: center;
     .gray {
         color: var(--gris);
     }
-
     .white {
         color: var(--white);
     }
@@ -784,6 +829,18 @@ max-width: 100%;
         padding-top: 3.2rem;
         padding-bottom: 3.2rem;
         }
+       
+    .slider-container-contact  {
+        display: block;
+    }
+    .slider-container-contact a  {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+    .slider-container-contact .card  {
+        width: auto;
+    }
+
     .slider-item {
         flex: 0%;
         object-fit: cover;
@@ -1100,7 +1157,6 @@ footer {
     position: relative;
  }
 footer p {
- color: var(--grisclaro);
+ color: var(--gris-pale);
  }
-
 

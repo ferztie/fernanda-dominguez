@@ -32,105 +32,29 @@
         </ul>
         </div>
     </nav>
-    
-        <span>
-            <a href="index.html" style="font-size:3rem;" class="align-center d-flex pl-3 fs-22 "><h4 class= "m-0" > Fernanda Domínguez </h4>
+            <a href="index.html" style="font-size:3rem;" class="align-center d-flex pl-3 fs-22 "><h5 class= "m-0" > Fernanda Domínguez </h5>
             </a>
-        </span>
     </header>
+    
     <input type="checkbox" id="theme-toggle" /> 
     <label class="toggle-btn"  for="theme-toggle"></label>
     
-    <!-- WORK -->  
-
-
-            <!-- TAB CONTROLLERS -->
-            <input id="panel-1-ctrl"
-            class="panel-radios d-none" type="radio" name="tab-radios" checked>
-            <input id="panel-2-ctrl"
-            class="panel-radios d-none" type="radio" name="tab-radios">
-            <input id="panel-3-ctrl"
-            class="panel-radios d-none" type="radio" name="tab-radios">
-            
-            
-    <!-- THE PANELS -->
-        <article id="panels">
-            <div>
-                <section id="panel-1">
-                    <main>
-                    <div class="display d-flex d-block-sm justify-content-around">
-                        <div class="d-flex mt-4 m-auto">
-                            <div class="align-center">
-                                <div class="d-flex flex-column align-center justify-content-center">
-                                    <div class="p-3">
-                                        <h1 class="m-0 negative">
-                                            Mexico City
-                                            Coyoacan
-                                        </h1>
-                                    </div>
-                                </div>
-                            </div>        
-                        </div> 
-                    </div>                
-                    </main>
-                </section>
-
-                <section id="panel-2">
-                    <main>
-                        <div class="display d-flex d-block-sm justify-content-around">
-                            <div class="d-flex mt-4 m-auto">
-                                <div class="align-center">
-                                    <div class="d-flex flex-column align-center justify-content-center">
-                                        <div class="p-3">
-                                            <a href=" https://wa.me/5215521980031?text=Hello%20there!%20I'm%20interested%20in%20your%20profile%20or%20services." target="_blank">
-                                            <h1 class="m-0 negative">
-                                                +52 1 55 2198 0031
-                                            </h1></a>
-                                        </div>
-                                    </div>
-                                </div>        
-                            </div> 
-                        </div>  
-                    </main>
-                </section>
-
-                <section id="panel-3">
-                    <main>
-                        <div class="display d-flex d-block-sm justify-content-around">
-                            <div class="d-flex mt-4 m-auto">
-                                <div class="align-center">
-                                    <div class="d-flex flex-column align-center justify-content-center">
-                                        <div class="p-3">
-                                            <h1 class="m-0 negative">
-                                                (GMT-6)
-                                            </h1>
-                                        </div>
-                                    </div>
-                                </div>        
-                            </div> 
-                        </div>  
-                    </main>
-                </section>
+        <section>
+            <div class="slider-container-contact tabs m-0">
+                <a class="card container-contact tablink primary-container class-center slider-item" block-sm>
+                    <h1 class="container negative text-center">Mexico City</h1>
+                </a>
+                <a href=" https://wa.me/5215521980031?text=Hello%20there!%20I'm%20interested%20in%20your%20profile%20or%20services." target="_blank" 
+                class="card container-contact tablink primary-container class-center slider-item" block-sm>
+                    <h2 class="container negative text-center">+52 1 55 2198 0031</h2>
+                </a>
+                <a class="card container-contact tablink primary-container class-center slider-item" block-sm>
+                    <h2 class="clock" timezone="-6"></h2></br>
+                    <h2 class="container negative text-center">(GMT-6)</h2>
+                </a>
             </div>
-
-            <ul id="tabs-list">
-                <label id="open-nav-label" for="nav-ctrl"></label>
-                <div class="slider-container tabs m-0">
-                        <li id="li-for-panel-1" class="secondary-container class-center slider-item card container " for="panel-1-ctrl">
-                            <label class="panel-label negative text-center"
-                                for="panel-1-ctrl">City</label>
-                        </li>
-                        <li id="li-for-panel-2" class="secondary-container class-center slider-item card container ">
-                            <label class="panel-label negative text-center"
-                                for="panel-2-ctrl">Phone</label>
-                            </li>
-                        <li id="li-for-panel-3"class="secondary-container class-center slider-item card container ">
-                            <label class="panel-label negative text-center"
-                            for="panel-3-ctrl">Time Zone</label>
-                        </li>
-                </div>
-            </ul>
-        </article>
+        </section>
+            
         <footer class="container">
             <div class="class-center d-flex flex-column">
                 <div class="class-center d-flex flex-column">
@@ -138,4 +62,41 @@
             </div>
         </footer>
         </body>
+        <script>
+            function dateToText(date) {
+                var hours = date.getHours()
+                var minutes = date.getMinutes();
+                // var seconds = date.getSeconds();
+                if (minutes < 10) minutes = '0'+minutes;
+                //if  seconds < 10) seconds = '0'+seconds;
+                if (hours < 10) hours = '0'+hours;
+                return hours + ":" + minutes; // + ":" + seconds;
+            }
+            function updateClocks() {
+                for (var i = 0; i < window.arrClocks.length; i++) {
+                    var clock = window.arrClocks[i];
+                    var offset = window.arrOffsets[i];
+                    clock.innerHTML = dateToText(new Date(new Date().getTime()+offset));
+                }
+            }
+            function startClocks() {
+                clockElements = document.getElementsByClassName('clock');
+                window.arrClocks = []
+                window.arrOffsets = [];
+                var j = 0;
+                for(var i = 0; i < clockElements.length; i++) {
+                    el = clockElements[i];
+                    timezone = parseInt(el.getAttribute('timezone'));
+                    if (!isNaN(timezone)) {
+                        var tzDifference = timezone * 60 + (new Date()).getTimezoneOffset();
+                        var offset = tzDifference * 60 * 1000;
+                        window.arrClocks.push(el);
+                        window.arrOffsets.push(offset);
+                    }
+                }
+                updateClocks();
+                clockID = setInterval(updateClocks, 1000);
+            }
+            setTimeout(startClocks, 100);
+            </script>
 </html>

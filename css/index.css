@@ -1,0 +1,8 @@
+.index-dflex {
+    display: block;
+}
+@media (min-width: 768px) {
+    .index-dflex{
+        display: flex;
+    }
+}
