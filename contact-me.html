@@ -18,27 +18,28 @@
     <link rel="icon" type="fav-icon" href="img/vozzoa-sello.svg" href="img/vozzoa-sello.svg">
 </head>
 <body>
-<header class="d-flex">
-    <nav role="navigation">
-        <div id="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-            <a href="index.html"><li>Home</li></a>
-            <a href="about.html"><li>About</li></a>
-            <a href="https://www.behance.net/fernandadominguez" target="_blank"><li>Behance</li></a> <a href="https://www.linkedin.com/in/fernanda-dom%C3%ADnguez-dise%C3%B1o-design-mex/" target="_blank"><li>LinkedIn</li></a>
-        </ul>
-        </div>
-    </nav>
-            <a href="index.html" style="font-size:3rem;" class="align-center d-flex pl-3 fs-22 "><h5 class= "m-0" > Fernanda Domínguez </h5>
+    <header class="d-flex intro intro-var ">
+        <nav role="navigation">
+            <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+                <ul id="menu">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About</li></a>
+                    <a href="browse-my-work.html"><li>Work</li></a>
+                    <a href="https://www.behance.net/fernandadominguez" target="_blank"><li>Behance</li></a> 
+                    <a href="https://www.linkedin.com/in/fernanda-dom%C3%ADnguez-dise%C3%B1o-design-mex/" target="_blank"><li>LinkedIn</li></a>
+                </ul>
+            </div>
+        </nav>
+            <a href="index.html" class="align-center d-flex pl-3 fs-22 m-0 primary-link"><h5 class= "m-0 primary-link" > Fernanda Domínguez </h5>
             </a>
     </header>
-    
     <input type="checkbox" id="theme-toggle" /> 
-    <label class="toggle-btn"  for="theme-toggle"></label>
-    
+    <label class="toggle-btn" onclick="toggleDarkLight()"  for="theme-toggle"></label>
+
         <section class="d-flex justify-content-center">
             <div class="slider-container-contact tabs m-0">
                 <a class="card container-contact tablink primary-container class-center slider-item" block-sm>
@@ -46,7 +47,7 @@
                 </a>
                 <a href=" https://wa.me/5215521980031?text=Hello%20there!%20I'm%20interested%20in%20your%20profile%20or%20services." target="_blank" 
                 class="card container-contact tablink primary-container class-center slider-item" block-sm>
-                    <h2 class="container negative text-center">+52 1 55 2198 0031</h2>
+                    <h2 class="container negative text-center"><i style="font-size: 7rem;" class="fa-brands fa-whatsapp"></i></h2>
                 </a>
                 <a class="card container-contact tablink primary-container class-center slider-item" block-sm>
                     <h2 class="clock" timezone="-6"></h2></br>
@@ -62,6 +63,7 @@
             </div>
         </footer>
         </body>
+        <script src="https://kit.fontawesome.com/c50a65dd68.js" crossorigin="anonymous"></script>
         <script>
             function dateToText(date) {
                 var hours = date.getHours()
@@ -98,5 +100,5 @@
                 clockID = setInterval(updateClocks, 1000);
             }
             setTimeout(startClocks, 100);
-            </script>
+        </script>
 </html>

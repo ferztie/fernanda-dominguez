@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/stars.css">
-    <link rel="stylesheet" href="css/modal.css">
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +28,6 @@
                     <ul id="menu">
                         <a href="index.html"><li>Home</li></a>
                         <a href="about.html"><li>About</li></a>
-                        <a href="browse-my-work.html"><li>Work</li></a>
                         <a href="https://www.behance.net/fernandadominguez" target="_blank"><li>Behance</li></a> 
                         <a href="https://www.linkedin.com/in/fernanda-dom%C3%ADnguez-dise%C3%B1o-design-mex/" target="_blank"><li>LinkedIn</li></a>
                     </ul>
@@ -58,31 +56,30 @@
                         </p>
                     </div>
                 </div>
-                <div>
-                    <div class="d-flex flex-row">
-                        <a class="card container class-center">
-                                <img src="img/Ilustrations/SVG/structure01.svg" alt="">
-                        </a>
-                    </div>   
-                    <div class="text-center pb-3 pt-3">
-                        <a class="btn m-0 primary-btn" href="#section2" title="brownse work"> Let's have a look</a>
-                    </div>             
+                <div class="slider-container tabs m-0">
+                    <a class="card container tablink primary-container class-center slider-item" block-sm>
+                            <h1 class="container negative text-center">Web Dev. </h1>
+                    </a>
+                    <a class="card container tablink primary-container class-center slider-item" block-sm>
+                            <h1 class="container negative text-center">UI</h1>
+                    </a>
+                    <a class="card container tablink primary-container class-center slider-item" block-sm>
+                        <h1 class="container negative text-center">UXD </h1>
+                    </a>
+                    <a class="card container tablink primary-container class-center slider-item" block-sm>
+                        <h1 class="container negative text-center">UXE</h1>
+                    </a>
                 </div>
+                
             </div>                
-        </div>  
-        <section>
-            <section id="stars">
-                <div id="stars2"></div>
-                <div id="stars3"></div>
-            </section>
-        </section>   
-        <section id="section2" class="gray-container m-0">
+        </div>     
+        <section id="work" class="gray-container m-0">
         <div class="tabs m-0">
             <ul id="tabs-list">
                 <label id="open-nav-label" for="nav-ctrl"></label>
                     <div class="slider-container tabs m-0">
                         <li id="li-for-panel-1" class="primary-container class-center slider-item card container ">
-                            <label class="panel-label negative text-center m-0"
+                            <label class="panel-label negative text-center"
                                 for="panel-1-ctrl">A Fintec</label>
                         </li>
                         <li id="li-for-panel-6" class="primary-container class-center slider-item card container ">
@@ -250,6 +247,5 @@
                 <p class="text-center"> Copyright © 2017-2023 Fernanda Domínguez, All Rights Reserved.</p> 
         </div>
     </footer>
-
 </body>
-</html>
+  </html>

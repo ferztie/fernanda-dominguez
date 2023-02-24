@@ -19,26 +19,28 @@
     <link rel="icon" type="fav-icon" href="img/vozzoa-sello.svg" href="img/vozzoa-sello.svg">
 </head>
 <body>
-<header class="d-flex">
-    <nav role="navigation">
-        <div id="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-            <a href="index.html"><li>Home</li></a>
-            <a href="about.html"><li>About</li></a>
-            <a href="https://www.behance.net/fernandadominguez" target="_blank"><li>Behance</li></a> <a href="https://www.linkedin.com/in/fernanda-dom%C3%ADnguez-dise%C3%B1o-design-mex/" target="_blank"><li>LinkedIn</li></a>
-        </ul>
-        </div>
-    </nav>
-            <a href="index.html" class="align-center d-flex pl-3 fs-22 m-0 primary-link">
-                <h5 class= "m-0 primary-link" > Fernanda Domínguez </h5>
+    <header class="d-flex intro intro-var ">
+        <nav role="navigation">
+            <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+                <ul id="menu">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About</li></a>
+                    <a href="browse-my-work.html"><li>Work</li></a>
+                    <a href="https://www.behance.net/fernandadominguez" target="_blank"><li>Behance</li></a> 
+                    <a href="https://www.linkedin.com/in/fernanda-dom%C3%ADnguez-dise%C3%B1o-design-mex/" target="_blank"><li>LinkedIn</li></a>
+                </ul>
+            </div>
+        </nav>
+            <a href="index.html" class="align-center d-flex pl-3 fs-22 m-0 primary-link"><h5 class= "m-0 primary-link" > Fernanda Domínguez </h5>
             </a>
     </header>
     <input type="checkbox" id="theme-toggle" /> 
-    <label class="toggle-btn"  for="theme-toggle"></label>
+    <label class="toggle-btn" onclick="toggleDarkLight()"  for="theme-toggle"></label>
+
     
     <!-- WORK -->  
     <section id="stars">
@@ -73,7 +75,7 @@
                                 <div class="d-flex flex-column align-center justify-content-center">
                                     <div class="p-3">
                                         <h1 class="m-0 negative">
-                                            I strive to design products that delight the senses and elevate the human experience.
+                                            An 'engineer of perception,' I believe that design is not just about solving problems, but about enhancing human experiences through the power of aesthetics and innovation.
                                         </h1>
                                     </div>
                                 </div>
@@ -186,7 +188,7 @@
                 <div class="slider-container tabs m-0">
                         <li id="li-for-panel-1" class="secondary-container class-center slider-item card container " for="panel-1-ctrl">
                             <label class="panel-label negative text-center"
-                                for="panel-1-ctrl">Me</label>
+                                for="panel-1-ctrl">I am</label>
                         </li>
                         <li id="li-for-panel-2"class="secondary-container class-center slider-item card container ">
                             <label class="panel-label negative text-center"

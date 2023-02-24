@@ -37,6 +37,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     box-sizing: inherit;
     font-size: 62.5%; /* 1 rem = 10px */   
     z-index: -2;
@@ -57,6 +58,7 @@ html {
 }
 
 html:has(body > #theme-toggle:checked) {
+    scroll-behavior: smooth;
     --white: #fff7f7;
     --black: #0d1220;
     

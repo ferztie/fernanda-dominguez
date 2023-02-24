@@ -1,3 +1,4 @@
+
 const toggle = document.getElementById('theme-toggle');
 
 // Get the current theme from Local Storage
